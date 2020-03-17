@@ -4,7 +4,7 @@ export default class Footer extends Component {
     render() {
         return (
             <div>
-                Footer
+                <a target="_blank" href="https://github.com/cml2377/Coronacation" rel="noopener noreferrer"><p>© Coronacation Designed by Brianna McCray, Kimi Inglet, Z Naddaf, Anthony Garza, Josh Kuruvilla, Mags Kiefer, and Crystal Ly.</p></a>
             </div>
         )
     }

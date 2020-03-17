@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -12,20 +12,15 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <Header />
+        <BrowserRouter>
+          <Header />
 
-        <Route exact path="/" component={Landing} />
-
-        <Route path="/profile" component={Profile} />
-
-        <Route path="/request" component={Request} />
-
-        <Route path="/stats" component={NeighborStats} />
-
-        <Footer />
+          <Footer />
+        </BrowserRouter>
       </div>
     );
   }
 }
+
 
 export default App;
