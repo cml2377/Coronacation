@@ -23,6 +23,8 @@ This area is dominated by [Nextdoor](https://nextdoor.com/), Facebook Groups, an
 
 ### Technologies Used
 MERN Stack
+UIKit or Bootstrap
+Motion-X for animation
 
 #### Contributors 
 
