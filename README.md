@@ -14,17 +14,16 @@ Maybe because there are a lot of people in the city, there should be a limit of 
 Every neighborhood can have it's own page.
 The top post will be whatever is the most recent or maybe whatever has the most comments on it. Like a fire topic.
 
-#### Crystal: 
->I believe we should have users sign up that want to volunteer first. Users who offer a set time/day that they are available, and then people can comment under their (calendar?) profile asking for help. 
-When the favor is completed, they can be thanked-- the number of thanks can be displayed by the user's profile pic. 
+<img src="./readmeImages/Screenshot_1.png" width="100%">
 
 ## Market Analysis
 This area is dominated by [Nextdoor](https://nextdoor.com/), Facebook Groups, and smaller alternatives like [Rooster](https://therooster.co/).
 
 ### Technologies Used
 MERN Stack
-UIKit or Bootstrap
+UIKit
 Motion-X for animation
+Requires a messaging/posting method in the app so users can pm sensitive data to each other.
 
 #### Contributors 
 
