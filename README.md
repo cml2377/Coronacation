@@ -23,6 +23,7 @@ This area is dominated by [Nextdoor](https://nextdoor.com/), Facebook Groups, an
 MERN Stack
 UIKit
 Motion-X for animation
+React Toastify for notifications
 Requires a messaging/posting method in the app so users can pm sensitive data to each other.
 
 #### Contributors 
