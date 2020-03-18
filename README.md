@@ -4,17 +4,21 @@ VIVA CORONACATIONNNNN
 ## Objective
 This app connects people in neighborhoods to each other based on their needs. If a user needs someone to grab prescriptions or groceries, they can ask fellow neighbors for assistance.
 
-#### Josh: 
->We could start small by just having it for Austin, and having like neighborhoods within Austin. Like Hyde Park, West Campus, Rosedale, etc.
-When a user wants to add a need, there's a form asking them what their need is and what neighborhood they are in. When they specify a neighborhood, we push the results to said neighborhood.
-The user's request could be seen as a post on reddit, where individuals can respond to if they have something they can offer.
-Maybe we could make it so that every user can be messaged. That way there's some sort of privacy for sharing information.
-When the user's need is received, they can remove their request.
-Maybe because there are a lot of people in the city, there should be a limit of 5 requests per user?
-Every neighborhood can have it's own page.
-The top post will be whatever is the most recent or maybe whatever has the most comments on it. Like a fire topic.
+#### Application Functionality
+When a user reaches the Landing Page at the root URL, the view information about the application, instructions about signing up, and links to Log in or Sign Up. 
 
-<img src="./readmeImages/Screenshot_1.png" width="100%">
+The Log In Page features an email field, password field, submit button, and password assistance link. ((Icebox: Google/Facebook/Other connection login with Auth0))
+
+The Sign Up Page features form to create account email and password, as well as radio dial preselections or a zipcode field for the user to select their Local Neighborhood. 
+
+After Logging In, the User is redirected to the User Home Page. Features include: [1] Display of Neighborhood Postings ordered by Most Recent in section: 'My Neighborhood'. [2] Link to user's Postings in 'My Postings'. [3] Link to Postings User has Responded to in 'My Responses'. [4] Form to create a Posting in 'Create Posting'
+
+When a user (Postee) needs something, they can post a Posting. On the Create Posting page, there's a form asking the User to define their need and a submit button. Once submitted, the Posting will be assigned a foreign key of the Neighborhood affiliated with the User's account. 
+
+Limit of 5 Requests per User. Unlimited number of Responses. 
+Ability to Flag Users abusing the system. Flagged User emails will be Blocked. 
+
+<img src="./readmeImages/flow3.png" width="100%">
 
 ## Market Analysis
 This area is dominated by [Nextdoor](https://nextdoor.com/), Facebook Groups, and smaller alternatives like [Rooster](https://therooster.co/).
