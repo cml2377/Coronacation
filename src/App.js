@@ -1,26 +1,27 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import React from "react";
+import NavBar from "./components/NavBar";
 
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Profile from './components/Profile';
-import Request from './components/RequestForm';
-import Landing from './components/pages/Landing';
-import NeighborStats from './components/pages/NeighborhoodStats';
+import { Router, Route, Switch } from "react-router-dom";
+import Profile from "./components/Profile";
+import history from "./utils/history";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="container">
-        <BrowserRouter>
-          <Header />
-          <Landing />
-          <Footer />
-        </BrowserRouter>
-      </div>
-    );
-  }
+import PrivateRoute from "./components/PrivateRoute";
+
+function App() {
+  return (
+    <div className="App">
+      {/* Don't forget to include the history module */}
+      <Router history={history}>
+        <header>
+          <NavBar />
+        </header>
+        <Switch>
+          <Route path="/" exact />
+          <PrivateRoute path="/profile" component={Profile} />
+        </Switch>
+      </Router>
+    </div>
+  );
 }
-
 
 export default App;
