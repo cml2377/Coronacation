@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-export default class RequestForm extends Component {
+export default class SignIn extends Component {
     render() {
         return (
             <div>
-                Request form
+                SignIn form here
             </div>
         )
     }
