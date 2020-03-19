@@ -4,6 +4,12 @@ VIVA CORONACATIONNNNN
 ## Objective
 This app connects people in neighborhoods to each other based on their needs. If a user needs someone to grab prescriptions or groceries, they can ask fellow neighbors for assistance.
 
+## User Story
+
+As someone who cannot leave my home or neighborhood, there are things that I need that I can’t get, so I want to post the things I need.
+As a person who has extra supplies (or access to extra supplies), I would like to help other people by donating the things I don’t need.
+
+
 #### Application Functionality
 When a user reaches the Landing Page at the root URL, the view information about the application, instructions about signing up, and links to Log in or Sign Up. 
 
@@ -24,12 +30,15 @@ Ability to Flag Users abusing the system. Flagged User emails will be Blocked.
 This area is dominated by [Nextdoor](https://nextdoor.com/), Facebook Groups, and smaller alternatives like [Rooster](https://therooster.co/).
 
 ### Technologies Used
-MERN Stack
-UIKit
-Motion-X for animation
-React Toastify for notifications
-Requires a messaging/posting method in the app so users can pm sensitive data to each other.
+MERN Stack  
+UIKit  
+SAS  
+Motion-X for animation  
+React Toastify for notifications  
+- Requires a messaging/posting method in the app so users can pm sensitive data to each other.  
+Tru.ly API  
+- For age verification   
 
 #### Contributors 
 
-Crystal Ly, Josh Kuruvilla, Kimi Inglet, Mags Kiefer, Z Naddaf, Brianna McCray, and Anthony Garza
+Crystal Ly, Josh Kuruvilla, Kimi Inglet, Mags Kiefer, Z Naddaf, Leo Lopez, Brianna McCray, Justin Wofford, Dan Fenichel, and Anthony Garza
