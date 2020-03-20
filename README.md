@@ -41,4 +41,4 @@ Tru.ly API
 
 #### Contributors 
 
-Crystal Ly, Josh Kuruvilla, Kimi Inglet, Mags Kiefer, Z Naddaf, Leo Lopez, Brianna McCray, Justin Wofford, Dan Fenichel, and Anthony Garza
+Kurt LaVacque, Crystal Ly, Josh Kuruvilla, Kimi Inglet, Mags Kiefer, Z Naddaf, Leo Lopez, Brianna McCray, Justin Wofford, Dan Fenichel, and Anthony Garza

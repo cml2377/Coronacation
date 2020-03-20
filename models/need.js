@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const { Schema } = mongoose;
+const mongoose = require('mongoose')
+const { Schema } = mongoose
 
 const needSchema = new Schema({
   name: {
@@ -16,9 +16,9 @@ const needSchema = new Schema({
   user: {
     type: String,
     required: true
-  }  // required
+  }
 })
 
-const Need = mongoose.model('needs', needSchema);
+const Need = mongoose.model('needs', needSchema)
 
-module.exports = Need;
+module.exports = Need

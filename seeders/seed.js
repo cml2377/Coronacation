@@ -1,37 +1,46 @@
-let mongoose = require('mongoose');
-let db = require('../models');
+const mongoose = require('mongoose')
+const db = require('../models')
 
-mongoose.connect("mongodb://localhost/need", {
+mongoose.connect('mongodb://localhost/need', {
+  useNewUrlParser: true,
+  useFindAndModify: false
+})
 
-});
-
-let needSeed = [
+const needSeed = [
   {
-    name: "Toilet Paper",
+    name: 'Toilet Paper',
     day: new Date().setDate(new Date().getDate() - 1),
-    description: "Please my butt is so dirty!",
+    description: 'Please my butt is so dirty!',
     completed: false,
-    user: "Crystal Ly"
+    user: 'Crystal Ly'
   },
   {
-    name: "Oranges",
+    name: 'Oranges',
     day: new Date().setDate(new Date().getDate() - 3),
     description: "I need Vit C or I'll get scurvy.",
     completed: false,
-    user: "Kurt LaVacque"
+    user: 'Kurt LaVacque'
   },
   {
-    name: "Cheerios",
+    name: 'Cheerios',
     day: new Date().setDate(new Date().getDate() - 2),
-    description: "Breakfast is important.",
+    description: 'Breakfast is important.',
     completed: false,
-    user: "Brianna McCray"
+    user: 'Brianna McCray'
   },
   {
-    name: "Medicine",
+    name: 'Medicine',
     day: new Date().setDate(new Date().getDate() - 1),
-    description: "Message me for details.",
+    description: 'Message me for details.',
     completed: false,
-    user: "Mags Kiefer"
+    user: 'Mags Kiefer'
   }
 ]
+
+db.Need.deleteMany({}).then(() => db.Need.collection.insertMany(needSeed)).then(data => {
+  console.log(data.result.n + ' records inserted.')
+  process.exit(0)
+}).catch(err => {
+  console.error(err)
+  process.exit(1)
+})
