@@ -1,12 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
-// mongoose.connect("mongodb://localhost/colabdb");
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/colabdb", { useNewUrlParser: true });
-// mongoose.connect(keys.mongoURI);
 
 const app = express();
 
+require('./routes/apiRoutes')(app);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'))
@@ -17,4 +16,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => { console.log("STARTED"); });
+app.listen(PORT, function () {
+  console.log(`Now listening on port: ${PORT}`);
+});
