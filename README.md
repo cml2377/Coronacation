@@ -1,5 +1,5 @@
-# Coronacation
-VIVA CORONACATIONNNNN
+# Coronacation AKA Communiteer AKA NeedATX
+Someone pick our name please.
 
 ## Objective
 This app connects people in neighborhoods to each other based on their needs. If a user needs someone to grab prescriptions or groceries, they can ask fellow neighbors for assistance.
@@ -8,6 +8,12 @@ This app connects people in neighborhoods to each other based on their needs. If
 
 As someone who cannot leave my home or neighborhood, there are things that I need that I can’t get, so I want to post the things I need.
 As a person who has extra supplies (or access to extra supplies), I would like to help other people by donating the things I don’t need.
+
+### Scope
+
+Currently, we are restricting the location for this app to Austin, TX zipcodes. This is our initial test-run of this app.
+
+> 78681 78701 78702 78703 78704 78705 78710 78712 78717 78719 78721 78722 78723 78724 78725 78726 78727 78728 78729 78730 78731 78732 78733 78734 78735 78736 78737 78738 78739 78741 78742 78744 78745 78746 78747 78748 78749 78750 78751 78752 78753 78754 78756 78757 78758 78759 78799
 
 
 #### Application Functionality
@@ -29,15 +35,18 @@ When a user (Postee) needs something, they can post a Posting. On the Create Pos
 * Ability to Flag Users abusing the system. 
 * Flagged User emails will be Blocked. 
 
-<img src="./readmeImages/flowchart.png" width="100%">
+<img src="./client/readmeImages/flowchart.png" width="100%">
+
+---
 
 ## Market Analysis
 This area is dominated by [Nextdoor](https://nextdoor.com/), Facebook Groups, and smaller alternatives like [Rooster](https://therooster.co/).
 
 ### Technologies Used
-MERN Stack  
+MERN Stack 
+Mongoose 
 UIKit  
-SAS  
+SASS  
 Motion-X for animation  
 React Toastify for notifications  
 - Requires a messaging/posting method in the app so users can pm sensitive data to each other.  
@@ -46,7 +55,7 @@ Tru.ly API
 
 ### Timeline
 
-<img src="./readmeImages/Timeline.png" width="100%">
+<img src="./client/readmeImages/Timeline.png" width="100%">
 
 #### Contributors 
 
