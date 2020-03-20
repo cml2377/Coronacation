@@ -13,8 +13,7 @@ const userSchema = new Schema({
   photo: String,
   phone: Number,
   location: String,
-  numberOfStars: Number,
-  postings: String
+  numberOfStars: Number
 });
 
 const User = mongoose.model('users', userSchema);
