@@ -17,14 +17,19 @@ The Log In Page features an email field, password field, submit button, and pass
 
 The Sign Up Page features form to create account email and password, as well as radio dial preselections or a zipcode field for the user to select their Local Neighborhood. 
 
-After Logging In, the User is redirected to the User Home Page. Features include: [1] Display of Neighborhood Postings ordered by Most Recent in section: 'My Neighborhood'. [2] Link to user's Postings in 'My Postings'. [3] Link to Postings User has Responded to in 'My Responses'. [4] Form to create a Posting in 'Create Posting'
+After Logging In, the User is redirected to the User Home Page. Features include: 
+[1] Display of Neighborhood Postings ordered by Most Recent in section: 'My Neighborhood'. 
+[2] Link to user's Postings in 'My Postings'. 
+[3] Link to Postings User has Responded to in 'My Responses'. [4] Form to create a Posting in 'Create Posting'.
 
 When a user (Postee) needs something, they can post a Posting. On the Create Posting page, there's a form asking the User to define their need and a submit button. Once submitted, the Posting will be assigned a foreign key of the Neighborhood affiliated with the User's account. 
 
-Limit of 5 Requests per User. Unlimited number of Responses. 
-Ability to Flag Users abusing the system. Flagged User emails will be Blocked. 
+* Limit of 5 Requests per User. 
+* Unlimited number of Responses. 
+* Ability to Flag Users abusing the system. 
+* Flagged User emails will be Blocked. 
 
-<img src="./readmeImages/flow3.png" width="100%">
+<img src="./readmeImages/flowchart.png" width="100%">
 
 ## Market Analysis
 This area is dominated by [Nextdoor](https://nextdoor.com/), Facebook Groups, and smaller alternatives like [Rooster](https://therooster.co/).
@@ -38,6 +43,10 @@ React Toastify for notifications
 - Requires a messaging/posting method in the app so users can pm sensitive data to each other.  
 Tru.ly API  
 - For age verification   
+
+### Timeline
+
+<img src="./readmeImages/Timeline.png" width="100%">
 
 #### Contributors 
 
