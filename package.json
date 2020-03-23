@@ -4,12 +4,13 @@
   "description": "VIVA CORONACATIONNNNN",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "server": "nodemon server.js",
-    "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "seed": "node seeders/seed.js"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -25,20 +26,8 @@
   "dependencies": {
     "axios": "^0.19.2",
     "concurrently": "^5.1.0",
-    "eslint-config-react-app": "^5.2.1",
-    "eslint-plugin-flowtype": "^4.6.0",
     "express": "^4.17.1",
     "mongojs": "^3.1.0",
     "mongoose": "^5.9.5"
-  },
-  "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^13.0.0",
-    "eslint-import-resolver-meteor": "^0.3.4",
-    "eslint-plugin-graphql": "^0.4.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^2.2.3",
-    "eslint-plugin-meteor": "^4.0.1",
-    "eslint-plugin-react": "^7.5.1"
   }
 }

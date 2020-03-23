@@ -1,4 +1,4 @@
-# Coronacation AKA Communiteer AKA NeedATX
+# Coronacation AKA Communiteer AKA Need
 Someone pick our name please.
 
 ## Objective
@@ -17,16 +17,23 @@ Currently, we are restricting the location for this app to Austin, TX zipcodes. 
 
 
 #### Application Functionality
-When a user reaches the Landing Page at the root URL, the view information about the application, instructions about signing up, and links to Log in or Sign Up. 
+
+When a user reaches the Landing Page at the root URL, they will view information about the application. 
 
 The Log In Page features an email field, password field, submit button, and password assistance link. ((Icebox: Google/Facebook/Other connection login with Auth0))
 
-The Sign Up Page features form to create account email and password, as well as radio dial preselections or a zipcode field for the user to select their Local Neighborhood. 
+(Icebox) The Sign Up Page features form to create account email and password, as well as radio dial preselections or a zipcode field for the user to select their Local Neighborhood. 
 
-After Logging In, the User is redirected to the User Home Page. Features include: 
-[1] Display of Neighborhood Postings ordered by Most Recent in section: 'My Neighborhood'. 
-[2] Link to user's Postings in 'My Postings'. 
+After the homepage, the User is redirected to a page with most recent Needs. Features include: 
+[1] Display of Neighborhood Postings ordered by Most Recent. 
+[2] Link to user's Postings in 'My Postings/User Profile'. 
 [3] Link to Postings User has Responded to in 'My Responses'. [4] Form to create a Posting in 'Create Posting'.
+
+<img src="./client/readmeImages/Wireframe-Prototype2.png" width="100%">
+
+<img src="./client/readmeImages/Wireframe-Prototype3.png" width="100%">
+
+<img src="./client/readmeImages/Wireframe-Prototype1.png" width="100%">
 
 When a user (Postee) needs something, they can post a Posting. On the Create Posting page, there's a form asking the User to define their need and a submit button. Once submitted, the Posting will be assigned a foreign key of the Neighborhood affiliated with the User's account. 
 
@@ -40,7 +47,7 @@ When a user (Postee) needs something, they can post a Posting. On the Create Pos
 ---
 
 ## Market Analysis
-This area is dominated by [Nextdoor](https://nextdoor.com/), Facebook Groups, and smaller alternatives like [Rooster](https://therooster.co/).
+This area is dominated by [Nextdoor](https://nextdoor.com/), Facebook Groups, Craigslist, and smaller alternatives like [Rooster](https://therooster.co/).
 
 ### Technologies Used
 MERN Stack 
@@ -59,4 +66,4 @@ Tru.ly API
 
 #### Contributors 
 
-Kurt LaVacque, Crystal Ly, Josh Kuruvilla, Kimi Inglet, Mags Kiefer, Z Naddaf, Leo Lopez, Brianna McCray, Justin Wofford, Dan Fenichel, and Anthony Garza
+Kurt LaVacque, Crystal Ly, Josh Kuruvilla, Z Naddaf, Leo Lopez, Brianna McCray, Justin Wofford, Israel Medina, and Anthony Garza
