@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
-const db = require('../models/index')
+const db = require('../models')
 
-mongoose.connect('mongodb://localhost/needdb', {
+mongoose.connect('mongodb://localhost/need', {
   useNewUrlParser: true,
   useFindAndModify: false
 })

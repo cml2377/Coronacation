@@ -1,14 +1,13 @@
-const express = require('express');
-const mongoose = require('mongoose');
+const express = require('express')
+const mongoose = require('mongoose')
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/needdb", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/needdb', { useNewUrlParser: true })
 
-const app = express();
+const app = express()
 
-require('./routes/apiRoutes')(app);
+require('./routes/apiRoutes')(app)
 
-
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000
 app.listen(PORT, function () {
-  console.log(`Now listening on port: ${PORT}`);
-});
+  console.log(`Now listening on port: ${PORT}`)
+})
