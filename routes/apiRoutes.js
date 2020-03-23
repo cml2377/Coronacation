@@ -54,13 +54,13 @@ module.exports = function (app) {
   // ==================================================================================================
   // Delete "need" from database/Mark complete
   // ==================================================================================================
-  app.delete('/api/need/:id', async (req, res) => {
-    // Create an empty workout object ready for exercises to get put into it
-    const request = await db.Needs.remove({ _id: mongojs.ObjectID(req.params.id) })
-    // Send the request back to the front end
-    res.send('Deleted')
-    console.log(request)
-  })
+  // app.delete('/api/need/:id', async (req, res) => {
+  //   // Create an empty workout object ready for exercises to get put into it
+  //   const request = await db.Needs.remove({ _id: mongojs.ObjectID(req.params.id) })
+  //   // Send the request back to the front end
+  //   res.send('Deleted')
+  //   console.log(request)
+  // })
 
   // ==================================================================================================
   // =========================         Grocery API Routes        =====================================
@@ -85,19 +85,19 @@ module.exports = function (app) {
   // A GET route for Grocery API-- https://rapidapi.com/apidojo/api/tasty
   // ==================================================================================================
 
-  app.get('/api')
+  //   app.get('/api')
 
-  fetch('https://tasty.p.rapidapi.com/tags/list', {
-    method: 'GET',
-    headers: {
-      'x-rapidapi-host': 'tasty.p.rapidapi.com',
-      'x-rapidapi-key': 'b0b3cd23a8msh9b5f67f9329c84fp15d39djsna60cc23aa720'
-    }
-  })
-    .then(response => {
-      console.log(response)
-    })
-    .catch(err => {
-      console.log(err)
-    })
+  //   fetch('https://tasty.p.rapidapi.com/tags/list', {
+  //     method: 'GET',
+  //     headers: {
+  //       'x-rapidapi-host': 'tasty.p.rapidapi.com',
+  //       'x-rapidapi-key': 'b0b3cd23a8msh9b5f67f9329c84fp15d39djsna60cc23aa720'
+  //     }
+  //   })
+  //     .then(response => {
+  //       console.log(response)
+  //     })
+  //     .catch(err => {
+  //       console.log(err)
+  //     })
 }
