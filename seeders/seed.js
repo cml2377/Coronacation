@@ -37,10 +37,13 @@ const needSeed = [
   }
 ]
 
-db.Need.deleteMany({}).then(() => db.Need.collection.insertMany(needSeed)).then(data => {
-  console.log(data.result.n + ' records inserted.')
-  process.exit(0)
-}).catch(err => {
-  console.error(err)
-  process.exit(1)
-})
+db.Needs.deleteMany({})
+  .then(() => db.Needs.insertMany(needSeed))
+  .then(data => {
+    console.log(data.length + ' records inserted!')
+    process.exit(0)
+  })
+  .catch(err => {
+    console.error(err)
+    process.exit(1)
+  })
