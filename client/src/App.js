@@ -6,7 +6,6 @@ import Profile from "./components/Profile";
 import history from "./utils/history";
 import RequestForm from "./components/RequestForm";
 
-import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
@@ -18,7 +17,7 @@ function App() {
         </header>
         <Switch>
           <Route path="/" exact component={RequestForm} />
-          <PrivateRoute path="/profile" component={Profile} />
+          <Route path="/profile" component={Profile} />
         </Switch>
       </Router>
     </div>
