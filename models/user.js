@@ -14,7 +14,7 @@ const userSchema = new Schema({
   phone: Number,
   location: String,
   numberOfStars: Number
-});
+})
 
 const User = mongoose.model('users', userSchema);
 
