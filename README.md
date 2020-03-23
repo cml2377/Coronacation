@@ -66,4 +66,10 @@ Tru.ly API
 
 #### Contributors 
 
-Kurt LaVacque, Crystal Ly, Josh Kuruvilla, Z Naddaf, Leo Lopez, Brianna McCray, Justin Wofford, Israel Medina, and Anthony Garza
+**Project Manager:** [Z Naddaf](https://github.com/N0matic)
+
+**Back-End Developers:** [Kurt LaVacque](https://github.com/livingkurt), [Crystal Ly](https://github.com/cml2377), [Leo Lopez](https://github.com/leolopez10) 
+
+**Front-End Developers:** [Brianna McCray](https://github.com/bwmccray), [Justin Wofford](https://github.com/JayDub21), [Crystal Ly](https://github.com/cml2377) 
+
+**QA/Advisors/Coding Gods:** [Israel Medina](https://github.com/medinaisrael-17), and [Anthony Garza](https://github.com/anthonyagarza)
