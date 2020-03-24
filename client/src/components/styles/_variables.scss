@@ -11,13 +11,13 @@ $backgroundColor: #333333;
 $linkColor: rgb(91, 161, 158);
 
 a {
-  color: rgb(91, 161, 158);
+  color: $linkColor;
   &:hover {
-    color: #bf5700;
+    color: $titleColor;
     text-decoration: none;
   }
   &:active {
-    color: #333333;
+    color: $backgroundColor;
   }
 }
 
