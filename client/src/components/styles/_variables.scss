@@ -21,12 +21,22 @@ a {
   }
 }
 
-p{
+p, h2{
   text-align: center;
+}
+
+h2{
+  font-size: 32px !important;
 }
 
 // You want to keep the font consistent, you add it here
 
 html{
   font-family: 'Bellota', cursive;
+  background-image: url("../../images/criss-crossBG.png");
+}
+
+li{
+  font-family: 'Bellota', cursive !important;
+  font-size: 1.2rem !important;
 }

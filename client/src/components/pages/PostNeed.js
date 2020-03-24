@@ -7,6 +7,8 @@ export default class PostNeed extends Component {
                 <p>Request form-- this is a list like the to-do list, with a bunch of items requested.
 
                 When logged, the post will contain the user who requested the items, the items themselves, the general location (zipcode) and date created.</p>
+
+                <a href="https://material-ui.com/components/transfer-list/">Material UI link to Transfer List Example</a>
             </div>
         )
     }
