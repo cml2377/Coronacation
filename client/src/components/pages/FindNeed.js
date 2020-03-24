@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
+import Grid from '@material-ui/core/Grid';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
     root: {
+        flexGrow: 1,
+        margin: 10,
+    },
+    card: {
         minWidth: 275,
-
+        maxWidth: 400,
+        margin: '15px',
     },
     bullet: {
         display: 'inline-block',
@@ -33,49 +39,90 @@ export default function FindNeed() {
     return (
         <div className="findNeedContainer">
             <p>This will display cards of needs populated by database.</p>
+            <Grid container className={classes.root}>
+                <Card className={classes.card}>
+                    <CardContent>
 
-            <Card className={classes.root}>
-                <CardContent>
-
-                    <Typography className={classes.title} color="textSecondary" gutterBottom>
-                        Zipcode 78759
+                        <Typography className={classes.title} color="textSecondary" gutterBottom>
+                            Zipcode 78759
                     </Typography>
 
-                    <Typography className={classes.text} component="h2">
-                        Toilet Paper
+                        <Typography className={classes.text} component="h2">
+                            Toilet Paper
                     </Typography>
 
-                    <Typography className={classes.text} component="p">
-                        User Email
+                        <Typography className={classes.text} component="p">
+                            User Email
                         <br />
                         Link to User Profile?
                     </Typography>
 
-                </CardContent>
-            </Card>
+                    </CardContent>
+                </Card>
 
-            {/* Just placeholding! */}
+                {/* Just placeholding! */}
 
-            <Card className={classes.root}>
-                <CardContent>
+                <Card className={classes.card}>
+                    <CardContent>
 
-                    <Typography className={classes.title} color="textSecondary" gutterBottom>
-                        Zipcode 78759
+                        <Typography className={classes.title} color="textSecondary" gutterBottom>
+                            Zipcode 78759
                     </Typography>
 
-                    <Typography className={classes.text} component="h2">
-                        Toilet Paper
+                        <Typography className={classes.text} component="h2">
+                            Toilet Paper
                     </Typography>
 
-                    <Typography className={classes.text} component="p">
-                        User Email
+                        <Typography className={classes.text} component="p">
+                            User Email
                         <br />
                         Link to User Profile?
                     </Typography>
 
-                </CardContent>
-            </Card>
+                    </CardContent>
+                </Card>
 
+                <Card className={classes.card}>
+                    <CardContent>
+
+                        <Typography className={classes.title} color="textSecondary" gutterBottom>
+                            Zipcode 78759
+                    </Typography>
+
+                        <Typography className={classes.text} component="h2">
+                            Toilet Paper
+                    </Typography>
+
+                        <Typography className={classes.text} component="p">
+                            User Email
+                        <br />
+                        Link to User Profile?
+                    </Typography>
+
+                    </CardContent>
+                </Card>
+
+                <Card className={classes.card}>
+                    <CardContent>
+
+                        <Typography className={classes.title} color="textSecondary" gutterBottom>
+                            Zipcode 78759
+                    </Typography>
+
+                        <Typography className={classes.text} component="h2">
+                            Toilet Paper
+                    </Typography>
+
+                        <Typography className={classes.text} component="p">
+                            User Email
+                        <br />
+                        Link to User Profile?
+                    </Typography>
+
+                    </CardContent>
+                </Card>
+
+            </Grid>
         </div>
     )
 }
