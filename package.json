@@ -7,18 +7,21 @@
     "node": "12.16.x"
   },
   "scripts": {
-    "start": "node index.js",
-    "server": "nodemon index.js",
-    "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "seed": "node seeders/seed.js",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cml2377/Coronacation.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Kurt LaVacque, Justin Wofford, Crystal Ly, Brianna McCray, Z Naddaf",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/cml2377/Coronacation/issues"

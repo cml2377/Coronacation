@@ -5,6 +5,17 @@
   right: 35px;
 }
 
+.appBar{
+  background-color: $backgroundColor !important;
+  margin-bottom: 20px;
+}
+
 .logo {
+  color: $titleColor;
+  font-family: 'Bellota', cursive !important;
+  font-size: 32px !important;
+}
+
+.hamburger {
   color: $titleColor;
 }

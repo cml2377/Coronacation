@@ -17,7 +17,6 @@ module.exports = function (app) {
       name: 'Tuna Fish',
       description: 'Description',
       completed: false,
-      image: 'image',
       user: 'Kurt'
     })
     // Send the request back to the front end
@@ -60,7 +59,6 @@ module.exports = function (app) {
         name: 'Tuna',
         description: 'Description',
         completed: false,
-        image: 'image',
         user: 'Kurt'
       })
     // Send the request back to the front end
@@ -86,7 +84,7 @@ module.exports = function (app) {
   // grocery items.
 
   // ==================================================================================================
-  // Images search/serpapi to fill in images in tiles (Separate from the Needs) - Working
+  // Images search/serpapi to fill in images in tiles (Separate from the Needs) - Working ***This is now Icebox***
   // ==================================================================================================
   app.get('/api/images/:search', async (req, res) => {
     const userQuery = req.params.search // good job

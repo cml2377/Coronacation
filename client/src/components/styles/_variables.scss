@@ -4,4 +4,39 @@
   align-items: center;
 }
 
-$titleColor: red;
+// Theme colors: White(#FFF), black (#333) borders, burnt orange(#bf5700), gray/teal rgb(91, 161, 158)
+
+$titleColor: #bf5700;
+$backgroundColor: #333333;
+$linkColor: rgb(91, 161, 158);
+
+a {
+  color: $linkColor;
+  &:hover {
+    color: $titleColor;
+    text-decoration: none;
+  }
+  &:active {
+    color: $backgroundColor;
+  }
+}
+
+p, h2{
+  text-align: center;
+}
+
+h2{
+  font-size: 32px !important;
+}
+
+// You want to keep the font consistent, you add it here
+
+html{
+  font-family: 'Bellota', cursive;
+  background-image: url("../../images/criss-crossBG.png");
+}
+
+li{
+  font-family: 'Bellota', cursive !important;
+  font-size: 1.2rem !important;
+}

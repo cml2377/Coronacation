@@ -1,0 +1,9 @@
+@import "./variables";
+
+.footerText {
+    @include flexCenter();
+    margin-top: 20px;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+}
