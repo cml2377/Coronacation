@@ -12,7 +12,6 @@ const needSchema = new Schema({
   },
   description: String,
   completed: Boolean,
-  image: String,
   user: {
     type: String,
     required: true
