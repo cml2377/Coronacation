@@ -1,11 +1,10 @@
 import React from "react";
 import NavBar from "./components/NavBar";
-
+import "./App.scss";
 import { Router, Route, Switch } from "react-router-dom";
 import Profile from "./components/Profile";
 import history from "./utils/history";
 import RequestForm from "./components/RequestForm";
-
 
 function App() {
   return (
