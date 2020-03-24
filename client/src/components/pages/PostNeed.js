@@ -124,7 +124,7 @@ export default function PostNeed() {
               disabled={leftChecked.length === 0}
               aria-label="move selected right"
             >
-              Add ✓
+              Add ✓ Below
             </Button>
             <Button
               className="listBtn"
@@ -140,6 +140,16 @@ export default function PostNeed() {
           </Grid>
         </Grid>
         <Grid item>{customList(right)}</Grid>
+        <Button
+          className="listBtn"
+          variant="outlined"
+          size="small"
+          className={classes.button}
+          //   onClick={handleSubmit}
+          aria-label="Submit List"
+        >
+          Submit List
+        </Button>
       </Grid>
       <br />
       <br />
