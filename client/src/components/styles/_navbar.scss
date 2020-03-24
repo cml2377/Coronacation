@@ -1,0 +1,10 @@
+@import "./variables";
+
+.centerLogo {
+  position: absolute;
+  right: 35px;
+}
+
+.logo {
+  color: $titleColor;
+}
