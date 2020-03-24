@@ -13,7 +13,8 @@ $linkColor: rgb(91, 161, 158);
 a {
   color: rgb(91, 161, 158);
   &:hover {
-    color: #bf5700;;
+    color: #bf5700;
+    text-decoration: none;
   }
   &:active {
     color: #333333;
