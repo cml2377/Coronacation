@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
@@ -20,7 +20,7 @@ const NavBar = () => {
   };
 
   return (
-    <div>
+    <div className="navBar">
       <AppBar className="appBar" position="static">
         <Toolbar>
           <Button
@@ -28,7 +28,8 @@ const NavBar = () => {
             aria-haspopup="true"
             onClick={handleClick}
           >
-            <MenuIcon />
+            <MenuIcon className="hamburger" >
+            </MenuIcon>
           </Button>
 
           <Menu
@@ -38,13 +39,19 @@ const NavBar = () => {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <MenuItem onClick={handleClose}>Home</MenuItem>
-            <MenuItem onClick={handleClose}>Request Help</MenuItem>
-            <MenuItem onClick={handleClose}>Corona Info</MenuItem>
+            <Link to="/" >
+              <MenuItem onClick={handleClose}>Home</MenuItem>
+            </Link>
+            <Link to="/post_need" >
+              <MenuItem onClick={handleClose}>Post Need</MenuItem>
+            </Link>
+            <Link to="/find_need" >
+              <MenuItem onClick={handleClose}>Find Need</MenuItem>
+            </Link>
           </Menu>
           <div className="centerLogo">
             <Typography variant="h6" className="logo">
-              iNeed
+              NeedATX
             </Typography>
           </div>
         </Toolbar>

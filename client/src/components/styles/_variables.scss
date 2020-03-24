@@ -4,4 +4,25 @@
   align-items: center;
 }
 
-$titleColor: red;
+// Theme colors: White(#FFF), black (#333) borders, burnt orange(#bf5700), gray/teal rgb(91, 161, 158)
+
+$titleColor: #bf5700;
+$backgroundColor: #333333;
+$linkColor: rgb(91, 161, 158);
+
+a {
+  color: rgb(91, 161, 158);
+  &:hover {
+    color: #bf5700;;
+  }
+  &:active {
+    color: #333333;
+  }
+}
+
+// You want to keep the font consistent, you add it here
+
+html{
+  font-family: 'Bellota', cursive;
+  height: 100vh;
+}

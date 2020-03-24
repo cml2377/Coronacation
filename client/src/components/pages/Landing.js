@@ -23,7 +23,7 @@ const rows = [
   ),
   createData(
     <a href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/prevention.html">
-      Centers for Disease Control and Prevention
+      CDC
     </a>
   ),
   createData(
@@ -40,7 +40,7 @@ export default class Landing extends Component {
         <TableContainer className="covidTable" component={Paper}>
           <Table aria-label="simple table">
             <TableHead>
-              <TableRow>
+              <TableRow className="linkRow">
                 <TableCell>COVID-19 Information By Organization:</TableCell>
               </TableRow>
             </TableHead>
