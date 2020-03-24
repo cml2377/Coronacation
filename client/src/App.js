@@ -8,16 +8,13 @@ import Footer from "./components/Footer";
 import Landing from "./components/pages/Landing";
 import history from "./utils/history";
 
-
 function App() {
   return (
     <div className="App">
       {/* Don't forget to include the history module */}
       <Router history={history}>
-        <header>
-          <Header />
-          <NavBar />
-        </header>
+        <NavBar />
+        <Header />
         <Switch>
           <Route path="/" exact component={Landing} />
           <Route path="/profile" component={Profile} />
@@ -25,7 +22,6 @@ function App() {
       </Router>
 
       <Footer />
-
     </div>
   );
 }
