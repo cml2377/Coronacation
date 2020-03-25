@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import React from "react";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -9,6 +9,28 @@ import Checkbox from "@material-ui/core/Checkbox";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import TextField from '@material-ui/core/TextField';
+
+const CssTextField = withStyles({
+  root: {
+    '& label.Mui-focused': {
+      color: 'green',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: 'green',
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'red',
+      },
+      '&:hover fieldset': {
+        borderColor: 'yellow',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'green',
+      },
+    },
+  },
+})(TextField);
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -40,22 +62,26 @@ export default function PostNeed() {
   const classes = useStyles();
   const [checked, setChecked] = React.useState([]);
   const [left, setLeft] = React.useState([
-    "Eggs",
+    "Baby Formula",
+    "Beans",
     "Bread",
-    "Fruit",
-    "Fresh Vegetables",
     "Canned Corn",
     "Canned Soup",
-    "Pedialyte",
-    "Soap",
-    "Ibuprofen",
-    "Beans",
     "Chicken",
+    "Diapers",
+    "Eggs",
+    "Fruit",
+    "Fresh Vegetables",
+    "Hand Sanitizer",
+    "Ibuprofen",
+    "Pedialyte",
     "Rice",
-    "Baby Formula",
+    "Soap",
     "Toilet Paper",
     "Tylenol",
-    "Hand Sanitizer"
+    "Wet Wipes",
+    "Other: Email me for more info"
+
   ]);
   const [right, setRight] = React.useState([]);
 
@@ -89,11 +115,17 @@ export default function PostNeed() {
   };
 
 
+  // To-do list
+  // 1. If no user-email, err
+  // 2. Submit list click = post user email to DB
+  // 3. Submit list click = post listItems[i].key to DB
   const handleSubmit = () => {
     let listItems = customList(right).props.children.props.children[0];
 
     for (var i = 0; i < listItems.length; i++) {
 
+
+      // Send this to back-end and make a post route to DB
       console.log(listItems[i].key);
 
     }
@@ -144,6 +176,7 @@ export default function PostNeed() {
         <Grid item>
           <Grid container direction="row" alignItems="center">
             <Button
+              id="addBtn"
               className="listBtn"
               variant="outlined"
               size="small"
@@ -169,12 +202,16 @@ export default function PostNeed() {
         </Grid>
         <Grid item>{customList(right)}</Grid>
 
-        <div>
-          <TextField
-            error
-            id="userEmail"
+        <div id="zipcodeInput">
+          <CssTextField
+            label="Zipcode"
+            variant="outlined"
+          />
+        </div>
+
+        <div id="userEmail">
+          <CssTextField
             label="Email"
-            defaultValue="user@email.com"
             variant="outlined"
           />
         </div>
