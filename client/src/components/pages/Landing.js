@@ -13,21 +13,21 @@ function createData(name) {
 
 const rows = [
   createData(
-    <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">
+    <a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">
       World Health Organization
     </a>
   ),
-  createData(<a href="http://www.austintexas.gov/COVID19">City of Austin</a>),
+  createData(<a target="_blank" href="http://www.austintexas.gov/COVID19">City of Austin</a>),
   createData(
-    <a href="https://www.dshs.state.tx.us/coronavirus/">State of Texas</a>
+    <a target="_blank" href="https://www.dshs.state.tx.us/coronavirus/">State of Texas</a>
   ),
   createData(
-    <a href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/prevention.html">
+    <a target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/prevention.html">
       CDC
     </a>
   ),
   createData(
-    <a href="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
+    <a target="_blank" href="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
       Global Spread Map
     </a>
   )

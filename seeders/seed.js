@@ -8,32 +8,32 @@ mongoose.connect('mongodb://localhost/need', {
 
 const needSeed = [
   {
-    name: 'Toilet Paper',
+    email: 'crystal@example.com',
     day: new Date().setDate(new Date().getDate() - 1),
-    description: 'Please my butt is so dirty!',
+    zipcode: 78759,
+    list: ["Eggs", "Bread"],
     completed: false,
-    user: 'Crystal Ly'
   },
   {
-    name: 'Oranges',
-    day: new Date().setDate(new Date().getDate() - 3),
-    description: "I need Vit C or I'll get scurvy.",
-    completed: false,
-    user: 'Kurt LaVacque'
-  },
-  {
-    name: 'Cheerios',
+    email: 'justin@mofos.com',
     day: new Date().setDate(new Date().getDate() - 2),
-    description: 'Breakfast is important.',
+    zipcode: 78751,
+    list: ["Fresh Vegetables", "Eggs"],
     completed: false,
-    user: 'Brianna McCray'
   },
   {
-    name: 'Medicine',
-    day: new Date().setDate(new Date().getDate() - 1),
-    description: 'Message me for details.',
+    email: 'izzy@issadrunk.com',
+    day: new Date().setDate(new Date().getDate() - 3),
+    zipcode: 78705,
+    list: ["Pedialyte", "Bread"],
     completed: false,
-    user: 'Mags Kiefer'
+  },
+  {
+    email: 'joshk@beeating.com',
+    day: new Date().setDate(new Date().getDate() - 6),
+    zipcode: 78729,
+    list: ["Corn", "Bread", "Rice", "Chicken", "Beans"],
+    completed: false,
   }
 ]
 

@@ -4,20 +4,16 @@ const mongojs = require('mongojs')
 
 module.exports = function (app) {
   // ==================================================================================================
-  // Create "need" via TILE(images of preset groceries) or INPUT BOX(custom need, like medicine)
+  // Create "need" in array
   // ==================================================================================================
   app.post('/api/need', async (req, res) => {
     // Save Need to Database
     const request = await db.Needs.create({
-      // name: req.body.name,
-      // description: req.body.description,
-      // completed: req.body.completed,
-      // image: req.body.image,
-      // user: req.body.user
-      name: 'Tuna Fish',
-      description: 'Description',
-      completed: false,
-      user: 'Kurt'
+      email: req.body.email,
+      day: new Date().setDate(new Date().getDate()),
+      zipcode: req.body.zipcode,
+      list: ["Cheese"],
+      completed: req.body.completed,
     })
     // Send the request back to the front end
     res.send(request)
@@ -51,15 +47,11 @@ module.exports = function (app) {
     // Create an empty workout object ready for exercises to get put into it
     const request = await db.Needs.findOneAndUpdate({ _id: req.params.id },
       {
-        // name: req.body.name,
-        // description: req.body.description,
-        // completed: req.body.completed,
-        // image: req.body.image,
-        // user: req.body.user
-        name: 'Tuna',
-        description: 'Description',
-        completed: false,
-        user: 'Kurt'
+        email: req.body.email,
+        day: Date().setDate(new Date().getDate()),
+        zipcode: req.body.zipcode,
+        list: ["Pedialyte", "Ibuprofen"],
+        completed: req.body.completed,
       })
     // Send the request back to the front end
     res.send({ "Updated": request })
@@ -76,12 +68,6 @@ module.exports = function (app) {
     res.send({ "Deleted": request })
   })
 
-  // ==================================================================================================
-  // =========================         Grocery API Routes        =====================================
-  // ==================================================================================================
-
-  // Grocery API will populate the items list that we offer users to add to their Needs. These are set
-  // grocery items.
 
   // ==================================================================================================
   // Images search/serpapi to fill in images in tiles (Separate from the Needs) - Working ***This is now Icebox***
@@ -94,24 +80,4 @@ module.exports = function (app) {
       res.json(info)
     })
   })
-
-  // ==================================================================================================
-  // A GET route for Grocery API-- https://rapidapi.com/apidojo/api/tasty
-  // ==================================================================================================
-
-  // app.get('/api')
-
-  // fetch('https://tasty.p.rapidapi.com/tags/list', {
-  //   method: 'GET',
-  //   headers: {
-  //     'x-rapidapi-host': 'tasty.p.rapidapi.com',
-  //     'x-rapidapi-key': 'b0b3cd23a8msh9b5f67f9329c84fp15d39djsna60cc23aa720'
-  //   }
-  // })
-  //   .then(response => {
-  //     console.log(response)
-  //   })
-  //   .catch(err => {
-  //     console.log(err)
-  //   })
 }

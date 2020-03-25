@@ -74,7 +74,8 @@ export default function PostNeed() {
 
     setChecked(newChecked);
   };
-
+  // Taking whatever is checked in the top box, and then you click the add button, 
+  // it transfers the items to the below box.
   const handleCheckedRight = () => {
     setRight(right.concat(leftChecked));
     setLeft(not(left, leftChecked));
@@ -87,8 +88,17 @@ export default function PostNeed() {
     setChecked(not(checked, rightChecked));
   };
 
+
   const handleSubmit = () => {
-    console.log(customList(right));
+    let listItems = customList(right).props.children.props.children[0];
+
+    for (var i = 0; i < listItems.length; i++) {
+
+      console.log(listItems[i].key);
+
+    }
+
+    // console.log(customList(right).props.children.props.children[0]);
   }
 
   const customList = items => (

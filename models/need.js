@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const { Schema } = mongoose
 
 const needSchema = new Schema({
-  name: {
+  email: {
     type: String,
     required: true
   },
@@ -10,12 +10,9 @@ const needSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  description: String,
+  zipcode: Number,
+  list: Array,
   completed: Boolean,
-  user: {
-    type: String,
-    required: true
-  }
 })
 
 const Need = mongoose.model('needs', needSchema)

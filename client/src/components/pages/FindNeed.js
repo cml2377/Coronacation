@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
@@ -40,6 +40,7 @@ export default function FindNeed() {
         <div className="findNeedContainer">
             <p>This will display cards of needs populated by database.</p>
             <Grid container className={classes.root}>
+                {/* Each card will be populated from the seed database or the actual database. */}
                 <Card className={classes.card}>
                     <CardContent>
 
@@ -54,7 +55,7 @@ export default function FindNeed() {
                         <Typography className={classes.text} component="p">
                             User Email
                         <br />
-                        Link to User Profile?
+                        Date Posted
                     </Typography>
 
                     </CardContent>
@@ -66,17 +67,37 @@ export default function FindNeed() {
                     <CardContent>
 
                         <Typography className={classes.title} color="textSecondary" gutterBottom>
-                            Zipcode 78759
+                            Zipcode 78756
                     </Typography>
 
                         <Typography className={classes.text} component="h2">
-                            Toilet Paper
+                            Cheese
                     </Typography>
 
                         <Typography className={classes.text} component="p">
                             User Email
                         <br />
-                        Link to User Profile?
+                        Date Posted
+                    </Typography>
+
+                    </CardContent>
+                </Card>
+
+                <Card className={classes.card}>
+                    <CardContent>
+
+                        <Typography className={classes.title} color="textSecondary" gutterBottom>
+                            Zipcode 78729
+                    </Typography>
+
+                        <Typography className={classes.text} component="h2">
+                            Oranges
+                    </Typography>
+
+                        <Typography className={classes.text} component="p">
+                            User Email
+                        <br />
+                        Date Posted
                     </Typography>
 
                     </CardContent>
@@ -90,33 +111,13 @@ export default function FindNeed() {
                     </Typography>
 
                         <Typography className={classes.text} component="h2">
-                            Toilet Paper
+                            Corona
                     </Typography>
 
                         <Typography className={classes.text} component="p">
                             User Email
                         <br />
-                        Link to User Profile?
-                    </Typography>
-
-                    </CardContent>
-                </Card>
-
-                <Card className={classes.card}>
-                    <CardContent>
-
-                        <Typography className={classes.title} color="textSecondary" gutterBottom>
-                            Zipcode 78759
-                    </Typography>
-
-                        <Typography className={classes.text} component="h2">
-                            Toilet Paper
-                    </Typography>
-
-                        <Typography className={classes.text} component="p">
-                            User Email
-                        <br />
-                        Link to User Profile?
+                        Date Posted
                     </Typography>
 
                     </CardContent>

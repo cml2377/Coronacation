@@ -39,7 +39,7 @@ After the homepage, the User is redirected to a page with most recent Needs. Fea
 
 When a user (Postee) needs something, they can post a Posting. On the Create Posting page, there's a form asking the User to define their need and a submit button. Once submitted, the Posting will be assigned a foreign key of the Neighborhood affiliated with the User's account. 
 
-* Limit of 5 Requests per User. 
+* Limit of 5 Requests per User?
 * Unlimited number of Responses. 
 * Ability to Flag Users abusing the system. 
 * Flagged User emails will be Blocked. 
@@ -68,7 +68,7 @@ React Toastify for notifications
 
 **Project Manager:** [Z Naddaf](https://github.com/N0matic)
 
-**Back-End Developers:** [Kurt LaVacque](https://github.com/livingkurt), [Crystal Ly](https://github.com/cml2377)
+**Back-End Developers:** [Kurt LaVacque](https://github.com/livingkurt), [Crystal Ly](https://github.com/cml2377), [Josh Kuruvilla](https://github.com/joshkuruvilla512)
 
 **Front-End Developers:** [Brianna McCray](https://github.com/bwmccray), [Justin Wofford](https://github.com/JayDub21), [Crystal Ly](https://github.com/cml2377) 
 
