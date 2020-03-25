@@ -1,4 +1,4 @@
-import React from "react";
+import React, {setState, useState} from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import List from "@material-ui/core/List";
@@ -9,8 +9,9 @@ import Checkbox from "@material-ui/core/Checkbox";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import TextField from '@material-ui/core/TextField';
+// import API from "../../utils/API";
 
-
+// CSS for the Zipcode and Email input boxes.
 const CssTextField = withStyles({
   root: {
     '& label.Mui-focused': {
@@ -117,23 +118,46 @@ export default function PostNeed() {
   };
 
 
+  const [needState, setNeedState] = useState({
+    email: "", 
+    zipcode: "", 
+    list: "", 
+    completed: false
+  });
+
+
   // To-do list
   // 1. If no user-email, err
   // 2. Submit list click = post user email to DB
   // 3. Submit list click = post listItems[i].key to DB
   const handleSubmit = () => {
     let listItems = customList(right).props.children.props.children[0];
-
+    
+    // This goes through each item that the user checked off
     for (var i = 0; i < listItems.length; i++) {
 
 
-      // Send this to back-end and make a post route to DB
+      // Send this list of checked items to back-end and make a post route to DB
       console.log(listItems[i].key);
-
+      const data = {
+        _id: needState.id,
+        email: needState.email,
+        zipcode: needState.zipcode, 
+        list: listItems[i].key,
+        completed: false
+      }
+      console.log(data);
+     
     }
 
     // console.log(customList(right).props.children.props.children[0]);
   }
+  const emailChange = event => {
+    setNeedState({...needState, email: event.target.value})
+  };
+  const zipChange = event => {
+    setNeedState({...needState, zipcode: event.target.value})
+  };
 
   const customList = items => (
     <Paper className={classes.paper}>
@@ -206,15 +230,21 @@ export default function PostNeed() {
 
         <div id="zipcodeInput">
           <CssTextField
+          id="userZipcodeInput"
             label="Zipcode"
             variant="outlined"
+            onChange={(e) => zipChange(e)}
           />
         </div>
-
+        
+{/* So we need to grab these inputs, but they're going to be on change so and then add a function that grabs their info so we can put them into our data we send back to the API. */}
         <div id="userEmail">
           <CssTextField
+          id="userEmailInput"
             label="Email"
             variant="outlined"
+            onChange={(e) => emailChange(e)}
+
           />
         </div>
 
