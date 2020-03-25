@@ -5,6 +5,15 @@
   margin: auto;
 }
 
-.listBtn {
-  margin: 5px;
+#addBtn {
+  margin: 10px;
+}
+
+#userEmail {
+  font-family: 'Bellota', cursive;
+  font-size: 18px;
+}
+
+#zipcodeInput, #userEmail{
+  margin-bottom: 10px;
 }

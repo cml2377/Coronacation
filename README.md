@@ -1,7 +1,9 @@
 # Coronacation AKA Communiteer AKA Need
-Someone pick our name please.
+
+Follow our development [here](https://coronacation.herokuapp.com/).
 
 ## Objective
+
 This app connects people in neighborhoods to each other based on their needs. If a user needs someone to grab prescriptions or groceries, they can ask fellow neighbors for assistance.
 
 ## User Story
@@ -37,7 +39,7 @@ After the homepage, the User is redirected to a page with most recent Needs. Fea
 
 When a user (Postee) needs something, they can post a Posting. On the Create Posting page, there's a form asking the User to define their need and a submit button. Once submitted, the Posting will be assigned a foreign key of the Neighborhood affiliated with the User's account. 
 
-* Limit of 5 Requests per User. 
+* Limit of 5 Requests per User?
 * Unlimited number of Responses. 
 * Ability to Flag Users abusing the system. 
 * Flagged User emails will be Blocked. 
@@ -56,9 +58,7 @@ UIKit
 SASS  
 Motion-X for animation  
 React Toastify for notifications  
-- Requires a messaging/posting method in the app so users can pm sensitive data to each other.  
-Tru.ly API  
-- For age verification   
+- Requires a messaging/posting method in the app so users can pm sensitive data to each other.   
 
 ### Timeline
 
@@ -68,7 +68,7 @@ Tru.ly API
 
 **Project Manager:** [Z Naddaf](https://github.com/N0matic)
 
-**Back-End Developers:** [Kurt LaVacque](https://github.com/livingkurt), [Crystal Ly](https://github.com/cml2377), [Leo Lopez](https://github.com/leolopez10) 
+**Back-End Developers:** [Kurt LaVacque](https://github.com/livingkurt), [Crystal Ly](https://github.com/cml2377), [Josh Kuruvilla](https://github.com/joshkuruvilla512)
 
 **Front-End Developers:** [Brianna McCray](https://github.com/bwmccray), [Justin Wofford](https://github.com/JayDub21), [Crystal Ly](https://github.com/cml2377) 
 

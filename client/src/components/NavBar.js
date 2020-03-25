@@ -50,9 +50,9 @@ const NavBar = () => {
             </Link>
           </Menu>
           <div className="centerLogo">
-            <Typography variant="h6" className="logo">
+            <Link to="/"><Typography variant="h6" className="logo">
               NeedATX
-            </Typography>
+            </Typography></Link>
           </div>
         </Toolbar>
       </AppBar>

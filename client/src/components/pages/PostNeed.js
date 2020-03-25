@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import React from "react";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -8,6 +8,29 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Checkbox from "@material-ui/core/Checkbox";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
+import TextField from '@material-ui/core/TextField';
+
+const CssTextField = withStyles({
+  root: {
+    '& label.Mui-focused': {
+      color: 'green',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: 'green',
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'red',
+      },
+      '&:hover fieldset': {
+        borderColor: 'yellow',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'green',
+      },
+    },
+  },
+})(TextField);
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -20,7 +43,11 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     margin: theme.spacing(0.5, 0)
-  }
+  },
+  '& .MuiTextField-root': {
+    margin: theme.spacing(1),
+    width: 200,
+  },
 }));
 
 function not(a, b) {
@@ -35,13 +62,26 @@ export default function PostNeed() {
   const classes = useStyles();
   const [checked, setChecked] = React.useState([]);
   const [left, setLeft] = React.useState([
-    "Eggs",
-    "Chicken",
-    "Rice",
     "Baby Formula",
+    "Beans",
+    "Bread",
+    "Canned Corn",
+    "Canned Soup",
+    "Chicken",
+    "Diapers",
+    "Eggs",
+    "Fruit",
+    "Fresh Vegetables",
+    "Hand Sanitizer",
+    "Ibuprofen",
+    "Pedialyte",
+    "Rice",
+    "Soap",
     "Toilet Paper",
     "Tylenol",
-    "Hand Sanitizer"
+    "Wet Wipes",
+    "Other: Email me for more info"
+
   ]);
   const [right, setRight] = React.useState([]);
 
@@ -60,7 +100,8 @@ export default function PostNeed() {
 
     setChecked(newChecked);
   };
-
+  // Taking whatever is checked in the top box, and then you click the add button, 
+  // it transfers the items to the below box.
   const handleCheckedRight = () => {
     setRight(right.concat(leftChecked));
     setLeft(not(left, leftChecked));
@@ -72,6 +113,25 @@ export default function PostNeed() {
     setRight(not(right, rightChecked));
     setChecked(not(checked, rightChecked));
   };
+
+
+  // To-do list
+  // 1. If no user-email, err
+  // 2. Submit list click = post user email to DB
+  // 3. Submit list click = post listItems[i].key to DB
+  const handleSubmit = () => {
+    let listItems = customList(right).props.children.props.children[0];
+
+    for (var i = 0; i < listItems.length; i++) {
+
+
+      // Send this to back-end and make a post route to DB
+      console.log(listItems[i].key);
+
+    }
+
+    // console.log(customList(right).props.children.props.children[0]);
+  }
 
   const customList = items => (
     <Paper className={classes.paper}>
@@ -116,6 +176,7 @@ export default function PostNeed() {
         <Grid item>
           <Grid container direction="row" alignItems="center">
             <Button
+              id="addBtn"
               className="listBtn"
               variant="outlined"
               size="small"
@@ -140,29 +201,33 @@ export default function PostNeed() {
           </Grid>
         </Grid>
         <Grid item>{customList(right)}</Grid>
+
+        <div id="zipcodeInput">
+          <CssTextField
+            label="Zipcode"
+            variant="outlined"
+          />
+        </div>
+
+        <div id="userEmail">
+          <CssTextField
+            label="Email"
+            variant="outlined"
+          />
+        </div>
+
         <Button
           className="listBtn"
           variant="outlined"
           size="small"
           className={classes.button}
-          //   onClick={handleSubmit}
+          onClick={handleSubmit}
           aria-label="Submit List"
         >
           Submit List
         </Button>
       </Grid>
-      <br />
-      <br />
-      <p>
-        Request form-- this is a list like the to-do list, with a bunch of items
-        requested. When logged, the post will contain the user who requested the
-        items, the items themselves, the general location (zipcode) and date
-        created.
-      </p>
 
-      <a href="https://material-ui.com/components/transfer-list/">
-        Material UI link to Transfer List Example
-      </a>
     </div>
   );
 }

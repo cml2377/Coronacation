@@ -13,7 +13,7 @@ export default class Footer extends Component {
         >
           <p>
             © Coronacation Designed by:<br /> Kurt LaVacque, Brianna McCray, Z Naddaf,
-            Anthony Garza, Leo Lopez, Justin Wofford and Crystal Ly.
+            Anthony Garza, Justin Wofford, Joshua Kuruvilla, and Crystal Ly.
           </p>
         </a>
 
