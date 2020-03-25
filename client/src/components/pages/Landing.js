@@ -40,14 +40,14 @@ export default class Landing extends Component {
         <TableContainer className="covidTable" component={Paper}>
           <Table aria-label="simple table">
             <TableHead>
-              <TableRow className="linkRow">
-                <TableCell>COVID-19 Information By Organization:</TableCell>
+              <TableRow >
+                <TableCell id="landingTitle">COVID-19 Information By Organization:</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {rows.map(row => (
                 <TableRow key={row.name}>
-                  <TableCell component="th" scope="row">
+                  <TableCell className="landingLinks" component="th" scope="row">
                     {row.name}
                   </TableCell>
                 </TableRow>

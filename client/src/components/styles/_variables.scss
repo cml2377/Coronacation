@@ -34,6 +34,9 @@ h2{
 html{
   font-family: 'Bellota', cursive;
   background-image: url("../../images/criss-crossBG.png");
+  ::selection {
+    background: $titleColor;
+  }
 }
 
 li{

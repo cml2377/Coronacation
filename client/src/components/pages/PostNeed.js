@@ -8,6 +8,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Checkbox from "@material-ui/core/Checkbox";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
+import TextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -20,7 +21,11 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     margin: theme.spacing(0.5, 0)
-  }
+  },
+  '& .MuiTextField-root': {
+    margin: theme.spacing(1),
+    width: 200,
+  },
 }));
 
 function not(a, b) {
@@ -36,6 +41,15 @@ export default function PostNeed() {
   const [checked, setChecked] = React.useState([]);
   const [left, setLeft] = React.useState([
     "Eggs",
+    "Bread",
+    "Fruit",
+    "Fresh Vegetables",
+    "Canned Corn",
+    "Canned Soup",
+    "Pedialyte",
+    "Soap",
+    "Ibuprofen",
+    "Beans",
     "Chicken",
     "Rice",
     "Baby Formula",
@@ -72,6 +86,10 @@ export default function PostNeed() {
     setRight(not(right, rightChecked));
     setChecked(not(checked, rightChecked));
   };
+
+  const handleSubmit = () => {
+    console.log(customList(right));
+  }
 
   const customList = items => (
     <Paper className={classes.paper}>
@@ -140,29 +158,29 @@ export default function PostNeed() {
           </Grid>
         </Grid>
         <Grid item>{customList(right)}</Grid>
+
+        <div>
+          <TextField
+            error
+            id="userEmail"
+            label="Email"
+            defaultValue="user@email.com"
+            variant="outlined"
+          />
+        </div>
+
         <Button
           className="listBtn"
           variant="outlined"
           size="small"
           className={classes.button}
-          //   onClick={handleSubmit}
+          onClick={handleSubmit}
           aria-label="Submit List"
         >
           Submit List
         </Button>
       </Grid>
-      <br />
-      <br />
-      <p>
-        Request form-- this is a list like the to-do list, with a bunch of items
-        requested. When logged, the post will contain the user who requested the
-        items, the items themselves, the general location (zipcode) and date
-        created.
-      </p>
 
-      <a href="https://material-ui.com/components/transfer-list/">
-        Material UI link to Transfer List Example
-      </a>
     </div>
   );
 }
