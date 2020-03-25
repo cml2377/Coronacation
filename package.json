@@ -20,8 +20,12 @@
     "type": "git",
     "url": "git+https://github.com/cml2377/Coronacation.git"
   },
-  "keywords": [],
-  "author": "Kurt LaVacque, Justin Wofford, Crystal Ly, Brianna McCray, Z Naddaf",
+  "keywords": [
+    "coronavirus",
+    "needATX",
+    "supplies"
+  ],
+  "author": "Kurt LaVacque, Justin Wofford, Crystal Ly, Brianna McCray, Z Naddaf, Joshua Kuruvilla",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/cml2377/Coronacation/issues"

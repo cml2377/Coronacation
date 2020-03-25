@@ -10,20 +10,22 @@ import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import TextField from '@material-ui/core/TextField';
 
+
 const CssTextField = withStyles({
   root: {
     '& label.Mui-focused': {
-      color: 'green',
+      color: '#bf5700',
+      fontFamily: 'Bellota',
     },
     '& .MuiInput-underline:after': {
       borderBottomColor: 'green',
     },
     '& .MuiOutlinedInput-root': {
       '& fieldset': {
-        borderColor: 'red',
+        borderColor: '#333333',
       },
       '&:hover fieldset': {
-        borderColor: 'yellow',
+        borderColor: 'rgb(91, 161, 158)',
       },
       '&.Mui-focused fieldset': {
         borderColor: 'green',
@@ -34,7 +36,7 @@ const CssTextField = withStyles({
 
 const useStyles = makeStyles(theme => ({
   root: {
-    margin: "auto"
+    margin: "auto",
   },
   paper: {
     width: 300,
