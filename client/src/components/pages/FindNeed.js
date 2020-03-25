@@ -12,7 +12,7 @@ import SearchIcon from '@material-ui/icons/Search';
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
-        margin: 10,
+        margin: 30,
     },
     card: {
         minWidth: 275,
@@ -53,8 +53,7 @@ export default function FindNeed() {
 
     return (
         <div className="findNeedContainer">
-            <p>This will display cards of needs populated by database.</p>
-
+            <h3>If request is filled, the card will be Transparent.</h3>
             {/* Search Bar to search by Zipcode. */}
             <Paper id="searchBar" component="form">
                 <InputBase

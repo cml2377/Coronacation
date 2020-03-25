@@ -12,8 +12,7 @@ export default class Footer extends Component {
           rel="noopener noreferrer"
         >
           <p>
-            © Coronacation Designed by:<br /> Kurt LaVacque, Brianna McCray, Z Naddaf,
-            Anthony Garza, Justin Wofford, Joshua Kuruvilla, and Crystal Ly.
+            © Coronacation Designed by:<br /> Kurt LaVacque, Brianna McCray, Z Naddaf, Justin Wofford, Joshua Kuruvilla, and Crystal Ly.
           </p>
         </a>
 
