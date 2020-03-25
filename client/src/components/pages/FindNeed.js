@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
@@ -8,6 +8,22 @@ import Paper from '@material-ui/core/Paper';
 import InputBase from '@material-ui/core/InputBase';
 import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
+
+import API from '../../utils/API';
+
+// useEffect(() => {
+//     get_needs();
+// }, []);
+// const [needState, setNeedState] = useState([]);
+// const [needs, setNeeds] = useState([]);
+
+// const get_needs = () => {
+//     API.getNeeds()
+//         .then(res => {
+//             setNeeds(res.data);
+//         })
+//         .catch(err => console.log(err));
+// };
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -67,25 +83,6 @@ export default function FindNeed() {
 
             <Grid container className={classes.root}>
                 {/* Each card will be populated from the seed database or the actual database. */}
-                <Card className={classes.card}>
-                    <CardContent>
-
-                        <Typography className={classes.title} color="textSecondary" gutterBottom>
-                            Zipcode 78759
-                    </Typography>
-
-                        <Typography className={classes.text} component="h2">
-                            Toilet Paper
-                    </Typography>
-
-                        <Typography className={classes.text} component="p">
-                            User Email
-                        <br />
-                        Date Posted
-                    </Typography>
-
-                    </CardContent>
-                </Card>
 
                 {/* Just placeholding! */}
 
@@ -109,45 +106,32 @@ export default function FindNeed() {
                     </CardContent>
                 </Card>
 
-                <Card className={classes.card}>
-                    <CardContent>
+                {/* <div>
+                    {needs.map(need => {
+                        return (
+                            <Card className={classes.card}>
+                                <CardContent>
 
-                        <Typography className={classes.title} color="textSecondary" gutterBottom>
-                            Zipcode 78729
-                    </Typography>
+                                    <Typography className={classes.title} color="textSecondary" gutterBottom>
+                                        Zipcode {need.zipcode}
+                                    </Typography>
 
-                        <Typography className={classes.text} component="h2">
-                            Oranges
-                    </Typography>
+                                    <Typography className={classes.text} component="h2">
+                                        {need.list}
+                                    </Typography>
 
-                        <Typography className={classes.text} component="p">
-                            User Email
-                        <br />
-                        Date Posted
-                    </Typography>
+                                    <Typography className={classes.text} component="p">
+                                        Email {need.email}
+                                        <br />
+                        Date Posted: {need.day}
+                                    </Typography>
 
-                    </CardContent>
-                </Card>
+                                </CardContent>
+                            </Card>
+                        )
+                    })}
+                </div> */}
 
-                <Card className={classes.card}>
-                    <CardContent>
-
-                        <Typography className={classes.title} color="textSecondary" gutterBottom>
-                            Zipcode 78759
-                    </Typography>
-
-                        <Typography className={classes.text} component="h2">
-                            Corona
-                    </Typography>
-
-                        <Typography className={classes.text} component="p">
-                            User Email
-                        <br />
-                        Date Posted
-                    </Typography>
-
-                    </CardContent>
-                </Card>
 
             </Grid>
         </div>
