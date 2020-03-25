@@ -16,5 +16,7 @@ export default {
     },
 
     // Update a Need when completed
-
+    updateNeed: function (id, needCompletion) {
+        return axios.put("/api/user/" + id, needCompletion);
+    },
 }
