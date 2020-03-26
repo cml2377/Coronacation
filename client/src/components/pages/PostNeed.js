@@ -66,23 +66,36 @@ export default function PostNeed() {
   const [checked, setChecked] = React.useState([]);
   const [left, setLeft] = React.useState([
     "Baby Formula",
+    "Bacon",
     "Beans",
+    "Beef",
     "Bread",
     "Canned Corn",
     "Canned Soup",
+    "Cereal",
+    "Cheese",
     "Chicken",
     "Diapers",
     "Eggs",
     "Fruit",
     "Fresh Vegetables",
+    "Frozen Dinners",
     "Hand Sanitizer",
     "Ibuprofen",
+    "Milk",
     "Pedialyte",
+    "Pork",
+    "Potato Chips",
     "Rice",
     "Soap",
+    "Soda",
+    "Tofu",
     "Toilet Paper",
+    "Tomatoes",
+    "Tortilla Chips",
     "Tylenol",
     "Wet Wipes",
+    "Wine",
     "Other: Email me for more info"
   ]);
   const [right, setRight] = React.useState([]);
@@ -140,8 +153,6 @@ export default function PostNeed() {
       console.log(itemsArray);
     }
     const data = {
-      // _id: needState.id,
-      // Hiiiiii
       email: needState.email,
       zipcode: needState.zipcode,
       list: itemsArray,
@@ -155,21 +166,7 @@ export default function PostNeed() {
       })
       .catch(err => console.log(err));
   };
-  //We need it to stop looping when the list items are done
 
-  //kimi worked on whats under this
-  //when this component mounts, load all saved needs
-  // useEffect(() => {
-  //   API.postNeed(data)
-  //     .then(res => {
-  //       console.log("After Request")
-  //       console.log(res.data)
-
-  //     })
-  //     .catch(err => console.log(err));
-  // }, []);
-
-  //kimi worked on whats above.
 
   const emailChange = event => {
     setNeedState({ ...needState, email: event.target.value });
