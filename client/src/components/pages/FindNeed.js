@@ -30,9 +30,5 @@ export default function FindNeeds() {
                 onClick={() => get_needs()}> HELLO </button>
         </div>
     )
-    
-
-
-
-
 }
+
