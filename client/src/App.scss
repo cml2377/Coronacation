@@ -3,3 +3,9 @@
 @import "../src/components/styles/footer";
 @import "../src/components/styles/postNeed";
 @import "../src/components/styles/findNeed";
+
+html,
+body {
+  height: 100%;
+  position: relative;
+}
