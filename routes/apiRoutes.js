@@ -8,11 +8,12 @@ module.exports = function (app) {
   // ==================================================================================================
   app.post('/api/need', async (req, res) => {
     // Save Need to Database
+    console.log({"apiRoutes.js":  req.body})
     const request = await db.Needs.create({
       email: req.body.email,
       day: new Date().setDate(new Date().getDate()),
       zipcode: req.body.zipcode,
-      list: ["Cheese"],
+      list: req.body.list,
       completed: req.body.completed,
     })
     // Send the request back to the front end

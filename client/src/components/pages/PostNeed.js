@@ -1,4 +1,4 @@
-import React, { setState, useState } from "react";
+import React, { setState, useState, useEffect } from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import List from "@material-ui/core/List";
@@ -141,12 +141,13 @@ export default function PostNeed() {
     }
     const data = {
       // _id: needState.id,
+      // Hiiiiii
       email: needState.email,
       zipcode: needState.zipcode,
       list: itemsArray,
       completed: false
     };
-    console.log(data);
+    console.log({ handleSubmit: data });
     API.postNeed(data)
       .then(res => {
         console.log("After Request");
@@ -155,6 +156,20 @@ export default function PostNeed() {
       .catch(err => console.log(err));
   };
   //We need it to stop looping when the list items are done
+
+  //kimi worked on whats under this
+  //when this component mounts, load all saved needs
+  // useEffect(() => {
+  //   API.postNeed(data)
+  //     .then(res => {
+  //       console.log("After Request")
+  //       console.log(res.data)
+
+  //     })
+  //     .catch(err => console.log(err));
+  // }, []);
+
+  //kimi worked on whats above.
 
   const emailChange = event => {
     setNeedState({ ...needState, email: event.target.value });
