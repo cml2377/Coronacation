@@ -64,18 +64,18 @@ export default class Footer extends Component {
 
           <Link
             color="inherit"
-            href="https://github.com/N0matic"
-            target="_blank"
-          >
-            Z Naddaf
-          </Link>
-
-          <Link
-            color="inherit"
             href="https://github.com/JayDub21"
             target="_blank"
           >
             Justin Wofford
+          </Link>
+
+          <Link
+            color="inherit"
+            href="https://github.com/cml2377/Coronacation"
+            target="_blank"
+          >
+            GitHub
           </Link>
         </Breadcrumbs>
       </div>
