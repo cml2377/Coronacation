@@ -6,6 +6,7 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
+import Grid from '@material-ui/core/Grid';
 
 function createData(name) {
   return { name };
@@ -36,7 +37,7 @@ const rows = [
 export default class Landing extends Component {
   render() {
     return (
-      <div>
+      <Grid container>
         <TableContainer className="covidTable" component={Paper}>
           <Table aria-label="simple table">
             <TableHead>
@@ -55,7 +56,11 @@ export default class Landing extends Component {
             </TableBody>
           </Table>
         </TableContainer>
-      </div>
-    );
-  }
-}
+        <div id="landingInfo">
+          <h3>Please check Needs and/or post Needs from the menu; use email to contact each other or exchange numbers.</h3>
+          
+          <h3>Whenever you fulfill a Need, please mark it as complete so others can look at unfulfilled Needs.</h3>
+
+        </div>
+        </Grid>
+    )}}

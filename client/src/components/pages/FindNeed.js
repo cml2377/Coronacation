@@ -11,6 +11,9 @@ import SearchIcon from '@material-ui/icons/Search';
 
 import API from '../../utils/API';
 
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Switch from '@material-ui/core/Switch';
+
 // useEffect(() => {
 //     get_needs();
 // }, []);
@@ -67,9 +70,20 @@ export default function FindNeed() {
 
     const classes = useStyles();
 
+    // For the switch toggle on the cards
+    const [state, setState] = React.useState({
+        checkedA: true,
+        checkedB: true,
+        checkedC: true,
+      });
+
+      const handleChange = event => {
+        setState({ ...state, [event.target.name]: event.target.checked });
+      };
+
     return (
         <div className="findNeedContainer">
-            <h3>If request is filled, the card will be Transparent.</h3>
+            <h3>If request is filled, the card will be Transparent. Switches toggled Red are still in Need.</h3>
             {/* Search Bar to search by Zipcode. */}
             <Paper id="searchBar" component="form">
                 <InputBase
@@ -88,10 +102,13 @@ export default function FindNeed() {
 
                 <Card className={classes.card}>
                     <CardContent>
-
+                    <FormControlLabel
+        control={<Switch checked={state.checkedA} onChange={handleChange} name="checkedA" />}
+        label="Status"/>
                         <Typography className={classes.title} color="textSecondary" gutterBottom>
                             Zipcode 78756
                     </Typography>
+                    
 
                         <Typography className={classes.text} component="h2">
                             Cheese
@@ -100,7 +117,51 @@ export default function FindNeed() {
                         <Typography className={classes.text} component="p">
                             User Email
                         <br />
-                        Date Posted
+                        Date Posted: A week ago
+                    </Typography>
+
+                    </CardContent>
+                </Card>
+
+                <Card className={classes.card}>
+                    <CardContent>
+                    <FormControlLabel
+        control={<Switch checked={state.checkedB} onChange={handleChange} name="checkedB" />}
+        label="Status"/>
+                        <Typography className={classes.title} color="textSecondary" gutterBottom>
+                            Zipcode 78729
+                    </Typography>
+
+                        <Typography className={classes.text} component="h2">
+                            Bread, Toilet Paper, Ibuprofen
+                    </Typography>
+
+                        <Typography className={classes.text} component="p">
+                            email@email.com
+                        <br />
+                        Date Posted: Todayyyyyy
+                    </Typography>
+
+                    </CardContent>
+                </Card>
+
+                <Card className={classes.card}>
+                    <CardContent>
+                    <FormControlLabel
+        control={<Switch checked={state.checkedC} onChange={handleChange} name="checkedC" />}
+        label="Status"/>
+                        <Typography className={classes.title} color="textSecondary" gutterBottom>
+                            Zipcode 78660
+                    </Typography>
+
+                        <Typography className={classes.text} component="h2">
+                            Canned Corn, Baby Formula, Diapers, Wet Wipes
+                    </Typography>
+
+                        <Typography className={classes.text} component="p">
+                            email@example.com
+                        <br />
+                        Date Posted: Heaven help me
                     </Typography>
 
                     </CardContent>
@@ -111,7 +172,9 @@ export default function FindNeed() {
                         return (
                             <Card className={classes.card}>
                                 <CardContent>
-
+<FormControlLabel
+        control={<Switch checked={state.checkedA} onChange={handleChange} name="checkedA" />}
+        label="Status"/>
                                     <Typography className={classes.title} color="textSecondary" gutterBottom>
                                         Zipcode {need.zipcode}
                                     </Typography>
