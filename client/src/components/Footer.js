@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 import Link from "@material-ui/core/Link";
-import StickyFooter from "react-sticky-footer";
 
 export default class Footer extends Component {
   render() {
@@ -65,18 +64,18 @@ export default class Footer extends Component {
 
           <Link
             color="inherit"
-            href="https://github.com/N0matic"
-            target="_blank"
-          >
-            Z Naddaf
-          </Link>
-
-          <Link
-            color="inherit"
             href="https://github.com/JayDub21"
             target="_blank"
           >
             Justin Wofford
+          </Link>
+
+          <Link
+            color="inherit"
+            href="https://github.com/cml2377/Coronacation"
+            target="_blank"
+          >
+            GitHub
           </Link>
         </Breadcrumbs>
       </div>
