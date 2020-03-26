@@ -9,3 +9,11 @@ body {
   height: 100%;
   position: relative;
 }
+
+.App {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px; /* height of your footer */
+}
