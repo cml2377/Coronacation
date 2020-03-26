@@ -51,7 +51,7 @@ module.exports = function(app) {
         email: req.body.email,
         day: Date().setDate(new Date().getDate()),
         zipcode: req.body.zipcode,
-        list: ["Pedialyte", "Ibuprofen"],
+        list: req.body.list,
         completed: req.body.completed
       },
       console.log(request)
