@@ -10,7 +10,6 @@ import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import TextField from '@material-ui/core/TextField';
 import API from "../../utils/API";
-import API from "../../utils/API";
 
 // CSS for the Zipcode and Email input boxes.
 const CssTextField = withStyles({
