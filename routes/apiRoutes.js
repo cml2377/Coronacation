@@ -17,7 +17,7 @@ module.exports = function (app) {
       completed: req.body.completed,
     })
     // Send the request back to the front end
-    res.send(request)
+    res.send({request})
   })
 
   // ==================================================================================================
