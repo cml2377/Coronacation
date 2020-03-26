@@ -5,6 +5,10 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/needdb', { useN
 
 const app = express()
 
+// This transfers body from frontend to backend
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
+
 require('./routes/apiRoutes')(app)
 
 if (process.env.NODE_ENV === 'production') {
