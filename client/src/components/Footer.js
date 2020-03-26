@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 import Link from "@material-ui/core/Link";
-import StickyFooter from "react-sticky-footer";
 
 export default class Footer extends Component {
   render() {
