@@ -14,20 +14,60 @@ import API from '../../utils/API';
 
 export default function FindNeeds() {
 
-    
-    const get_needs = () => {
-        API.getNeeds()
-            .then(res => {
-                const needs = res.data
-                console.log(needs);
-            })
-    }
-    
-    
+    // const useStyles = makeStyles(theme => ({
+    //     root: {
+    //         flexGrow: 1,
+    //         margin: 30,
+    //     },
+    //     card: {
+    //         minWidth: 275,
+    //         maxWidth: 400,
+    //         margin: '15px',
+    //     },
+    //     input: {
+    //         marginLeft: theme.spacing(1),
+    //         flex: 1,
+    //     },
+    //     bullet: {
+    //         display: 'inline-block',
+    //         margin: '0 2px',
+    //         transform: 'scale(0.8)',
+    //     },
+    //     iconButton: {
+    //         padding: 10,
+    //     },
+    //     title: {
+    //         fontSize: 14,
+    //         fontFamily: 'Bellota',
+    //     },
+    //     text: {
+    //         fontFamily: 'Bellota',
+    //     },
+    //     divider: {
+    //         height: 28,
+    //         margin: 4,
+    //     },
+    //     pos: {
+    //         marginBottom: 12,
+    //     },
+    // }));
+
+    API.getNeeds()
+        .then(res => {
+            console.log(res.data);
+            for (var i = 0; i < res.data.length; i++) {
+                console.log("Hello")
+                const test = res.data[i];
+                console.log(test)
+            }
+                         
+        })
+
+
+
     return (
         <div>
-            <button
-                onClick={() => get_needs()}> HELLO </button>
+            <button> HELLO </button>
         </div>
     )
 }

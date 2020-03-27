@@ -27,7 +27,7 @@ module.exports = function(app) {
     const request = await db.Needs.find({});
     // Send the request back to the front end
     // res.send(request)
-    res.send({ "Get All": request });
+    res.send(request);
   });
 
   // ==================================================================================================
