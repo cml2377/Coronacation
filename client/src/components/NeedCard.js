@@ -8,43 +8,52 @@ import API from "../../utils/API";
 
 
 class FindNeed extends Component {
-    // state = {  }
 
     render() {
         return (
+            API.getNeeds()
+                .then(res => {
+                    console.log(res.data);
+                    for (var i = 0; i < res.data.length; i++) {
+                        console.log("Hello")
+                        const test = res.data[i];
+                        // console.log(test)
+                        const needInfo = {
+                            id: test._id,
+                            list: test.list,
+                            email: test.email,
+                            date: test.day,
+                            zipcode: test.zipcode
+                        }
+
+                        console.log(needInfo);
 
 
-            <div>
-                <Card className={classes.card}>
-                    <CardContent>
-                        <FormControlLabel
-                            control={<Switch checked={state.checkedA} onChange={handleChange} name="checkedA" />}
-                            label="Status" />
-                        <Typography className={classes.title} color="textSecondary" gutterBottom>
-                            Zipcode {props.zipcode}
-                        </Typography>
-
-                        <Typography className={classes.text} component="h2">
-                            {props.list}
-                        </Typography>
-
-                        <Typography className={classes.text} component="p">
-                            Email {props.email}
-                            <br />
-                            Date Posted: {props.date}
-                        </Typography>
-
-                    </CardContent>
-                </Card>
-                    )
-                })}
-            </div>
-
-
-
-
-        )
+                        <div>
+                            {needInfo.map(need => {
+                                return (
+                                    <Card className={classes.card}>
+                                        <CardContent>
+                                            <FormControlLabel
+                                                control={<Switch checked={state.checkedA} onChange={handleChange} name="checkedA" />}
+                                                label="Status" />
+                                            <Typography className={classes.title} color="textSecondary" gutterBottom>
+                                                Zipcode {need.zipcode}
+                                            </Typography>
+                                            <Typography className={classes.text} component="h2">
+                                                {need.list}
+                                            </Typography>
+                                            <Typography className={classes.text} component="p">
+                                                Email {need.email}
+                                                <br />
+                                                Date Posted: {need.day}
+                                            </Typography>
+                                        </CardContent>
+                                    </Card>
+                                )
+                            })}
+                        </div>
+                    }
+                }))
     }
 }
-
-export default FindNeed;
