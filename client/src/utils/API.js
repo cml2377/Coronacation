@@ -8,6 +8,17 @@ export default {
         return axios.get("/api/needs");
     },
 
+    //getting specific needs
+    searchNeed:  (zipcode) => {
+        return axios.get("/api/needs?zipcode="+zipcode);
+    },
+
+    //Finding searched needs
+    // findNeeds: (searchString) => { 
+    //     console.log(searchString)
+    //     return axios.get("/api/needs/" , searchString, {email, day, zipcode, list})
+    // },
+
     //getting one need
     getNeed: function (id) {
         console.log(id)

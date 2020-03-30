@@ -40,6 +40,14 @@ module.exports = function(app) {
     res.send({ "Get Single": request });
   });
 
+   // ==================================================================================================
+  // Find "needs" with search bar
+  // ==================================================================================================
+  app.get("/api/need/search_need", async (req, res) => {
+    const request = await db.Needs.find( { $text: { $search: req.body.search } } )
+    res.send({ "Search For" : request });
+  });
+
   // ==================================================================================================
   // Update "need" to COMPLETE - Working
   // ==================================================================================================
@@ -61,6 +69,7 @@ module.exports = function(app) {
       console.log(err);
     });
   });
+  
 
   // ==================================================================================================
   // Delete "need" from database/Mark complete - Working
@@ -71,17 +80,5 @@ module.exports = function(app) {
     // Send the request back to the front end
     // res.send('Deleted')
     res.send({ Deleted: request });
-  });
-
-  // ==================================================================================================
-  // Images search/serpapi to fill in images in tiles (Separate from the Needs) - Working ***This is now Icebox***
-  // ==================================================================================================
-  app.get("/api/images/:search", async (req, res) => {
-    const userQuery = req.params.search; // good job
-    const query_url = `https://serpapi.com/search?q=${userQuery}&tbm=isch&ijn=0`;
-    axios.get(query_url).then(function(response) {
-      const info = response.data;
-      res.json(info);
-    });
   });
 };
