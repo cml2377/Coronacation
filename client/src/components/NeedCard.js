@@ -4,20 +4,14 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 
-
-class NeedCard extends Component {
-
-    render() {
-
-        const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(theme => ({
             root: {
                 flexGrow: 1,
                 margin: 30,
             },
             card: {
-                card: {
                 minWidth: 275,
                 maxWidth: 400,
                 margin: '15px',
@@ -45,7 +39,13 @@ class NeedCard extends Component {
                 height: 28,
                 margin: 4,
             }
-        }));
+        }
+        ));
+
+class NeedCard extends Component {
+
+    render() {
+        
         const needProps = this.props.need;
         const classes = {}
         return (
@@ -70,7 +70,6 @@ class NeedCard extends Component {
             </div>
         )
     }
-
 }
 
-export default NeedCard
+export default withStyles(useStyles, {withTheme: true}) (NeedCard);

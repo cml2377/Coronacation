@@ -67,13 +67,6 @@ export default class FindNeed extends Component {
             })
     };
     
-    // TODO: list of needs in its state
-    // const [needState, setNeedState] = useState([]);
-    // const [needs, setNeeds] = useState([]);
-    // const [search, setSearch] = useState([]);
-
-    // const classes = useStyles();
-
     // TODO: write a function that will perform API call and populates list in state with results
 
     doAPICall() {
