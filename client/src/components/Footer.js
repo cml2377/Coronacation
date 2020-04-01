@@ -8,22 +8,21 @@ export default class Footer extends Component {
       <div className="footerText">
         <Breadcrumbs aria-label="breadcrumb">
           <Link
-            color="inherit"
+            className="linkNames"
             href="https://github.com/cml2377/Coronacation"
             target="_blank"
           >
             Need ATX
           </Link>
           <Link
-            color="inherit"
+            className="linkNames"
             href="https://github.com/joshkuruvilla512"
             target="_blank"
           >
             Joshua Kuruvilla
           </Link>
-
           <Link
-            color="inherit"
+            className="linkNames"
             href="https://github.com/livingkurt"
             target="_blank"
           >
@@ -31,15 +30,7 @@ export default class Footer extends Component {
           </Link>
 
           <Link
-            color="inherit"
-            href="https://github.com/leolopez10"
-            target="_blank"
-          >
-            Leo Lopez
-          </Link>
-
-          <Link
-            color="inherit"
+            className="linkNames"
             href="https://github.com/cml2377"
             target="_blank"
           >
@@ -47,7 +38,7 @@ export default class Footer extends Component {
           </Link>
 
           <Link
-            color="inherit"
+            className="linkNames"
             href="https://github.com/bwmccray"
             target="_blank"
           >
@@ -55,7 +46,7 @@ export default class Footer extends Component {
           </Link>
 
           <Link
-            color="inherit"
+            className="linkNames"
             href="https://github.com/N0matic"
             target="_blank"
           >
@@ -63,7 +54,7 @@ export default class Footer extends Component {
           </Link>
 
           <Link
-            color="inherit"
+            className="linkNames"
             href="https://github.com/JayDub21"
             target="_blank"
           >
@@ -71,7 +62,7 @@ export default class Footer extends Component {
           </Link>
 
           <Link
-            color="inherit"
+            className="linkNames"
             href="https://github.com/cml2377/Coronacation"
             target="_blank"
           >

@@ -1,7 +1,7 @@
 import React, { Component, useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
 import Grid from "@material-ui/core/Grid";
+import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
@@ -49,6 +49,8 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+
+
 export default class FindNeed extends Component {
   constructor(props) {
     super(props);
@@ -91,28 +93,47 @@ export default class FindNeed extends Component {
   render() {
     return (
       <div className="findNeedContainer">
-        <h3>List of Needs.</h3>
+        <h3>List of Needs</h3>
         {/* Search Bar to search by Zipcode. */}
         <Paper id="searchBar" component="form">
           <InputBase
-            onChange={this.handleSearch}
+            id="searchBarInput"
+            onChange={event => this.handleSearch(event)} onKeyPress={this.props.onKeyPress || null}
+            // Whyyyyyy
+            onKeyPress={event => {
+
+              // console.log("Enter Pressed!", event.which == 13)
+              if (event.which === 13) {
+                // this.searchZipcode()
+                document.getElementById("iconButton").click();
+                event.preventDefault()
+              }
+            }}
             className={this.classes.input}
             placeholder="Search by zipcode"
           />
           <IconButton
+            id="iconButton"
+            // onClick for zipcode works, but not onSubmit above
             onClick={this.searchZipcode}
             className={this.classes.iconButton}
             aria-label="search"
+          /* if (onClick ===true) {
+            onClick=this.SearchZipcode
+          } else {
+            
+          }
+          */
           >
             <SearchIcon />{" "}
             {/* TODO: ON Enter or click, call doAPICall with the search string  */}
           </IconButton>
         </Paper>
 
-        <Grid container className={this.classes.root}>
+        <Grid container className={this.classes.root} id="grid">
           {/* use that list from the state to make a bunch of NeedCards */}
           {this.state.needs.map(n => (
-            <NeedCard need={n} />
+            <NeedCard need={n} id="needCard"></NeedCard>
           ))}
         </Grid>
       </div>
