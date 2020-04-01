@@ -130,10 +130,10 @@ export default class FindNeed extends Component {
           </IconButton>
         </Paper>
 
-        <Grid container className={this.classes.root}>
+        <Grid container className={this.classes.root} id="grid">
           {/* use that list from the state to make a bunch of NeedCards */}
           {this.state.needs.map(n => (
-            <NeedCard need={n} />
+            <NeedCard need={n} id="needCard"></NeedCard>
           ))}
         </Grid>
       </div>

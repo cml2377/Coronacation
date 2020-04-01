@@ -88,3 +88,12 @@ module.exports = function (app) {
     res.send({ Deleted: request });
   });
 };
+
+// ===========================================================
+// Auto delete documents (Needs) from database after 2 weeks.
+// ===========================================================
+
+app.delete("/api/need/", async (req, res) => {
+  const oldNeeds = await db.Needs.remove({ date: { $lte: new Date().getDate() - 14 } });
+  res.send({ Deleted: oldNeeds })
+})
