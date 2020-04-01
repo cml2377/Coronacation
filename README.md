@@ -68,7 +68,7 @@ React Toastify for notifications
 
 **Project Manager:** [Z Naddaf](https://github.com/N0matic)
 
-**Back-End Developers:** [Kurt LaVacque](https://github.com/livingkurt), [Crystal Ly](https://github.com/cml2377), [Josh Kuruvilla](https://github.com/joshkuruvilla512)
+**Back-End Developers:** [Kurt LaVacque](https://github.com/livingkurt), [Crystal Ly](https://github.com/cml2377), [Justin Wofford](https://github.com/JayDub21)
 
 **Front-End Developers:** [Brianna McCray](https://github.com/bwmccray), [Justin Wofford](https://github.com/JayDub21), [Crystal Ly](https://github.com/cml2377) 
 
