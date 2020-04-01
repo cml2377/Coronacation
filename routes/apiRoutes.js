@@ -2,7 +2,7 @@ const db = require("../models/index");
 const axios = require("axios");
 const mongojs = require("mongojs");
 
-module.exports = function(app) {
+module.exports = function (app) {
   // ==================================================================================================
   // Create "need" in array
   // ==================================================================================================
@@ -23,10 +23,16 @@ module.exports = function(app) {
   // ==================================================================================================
   // Get all "needs" from local database based location - Working
   // ==================================================================================================
+
+
   app.get("/api/needs", async (req, res) => {
-    const request = await db.Needs.find({});
-    // Send the request back to the front end
-    // res.send(request)
+    // Query is either empty to return all
+    // Or query will filter by zipcode
+    let query = {}
+    if (req.query.zipcode) {
+      query.zipcode = req.query.zipcode
+    }
+    const request = await db.Needs.find(query);
     res.send(request);
   });
 
@@ -40,12 +46,12 @@ module.exports = function(app) {
     res.send({ "Get Single": request });
   });
 
-   // ==================================================================================================
+  // ==================================================================================================
   // Find "needs" with search bar
   // ==================================================================================================
   app.get("/api/need/search_need", async (req, res) => {
-    const request = await db.Needs.find( { $text: { $search: req.body.search } } )
-    res.send({ "Search For" : request });
+    const request = await db.Needs.find({ $text: { $search: req.body.search } })
+    res.send({ "Search For": request });
   });
 
   // ==================================================================================================
@@ -69,7 +75,7 @@ module.exports = function(app) {
       console.log(err);
     });
   });
-  
+
 
   // ==================================================================================================
   // Delete "need" from database/Mark complete - Working

@@ -95,7 +95,8 @@ export default class FindNeed extends Component {
         {/* Search Bar to search by Zipcode. */}
         <Paper id="searchBar" component="form">
           <InputBase
-            onChange={this.handleSearch}
+            // onChange={this.handleSearch}
+            onChange={event => this.handleSearch(event)} onKeyPress={this.props.onKeyPress || null}
             className={this.classes.input}
             placeholder="Search by zipcode"
           />
