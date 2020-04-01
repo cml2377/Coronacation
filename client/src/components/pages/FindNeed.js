@@ -93,7 +93,7 @@ export default class FindNeed extends Component {
   render() {
     return (
       <div className="findNeedContainer">
-        <h3>List of Needs.</h3>
+        <h3>List of Needs</h3>
         {/* Search Bar to search by Zipcode. */}
         <Paper id="searchBar" component="form">
           <InputBase
