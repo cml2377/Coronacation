@@ -65,38 +65,38 @@ export default function PostNeed() {
   const classes = useStyles();
   const [checked, setChecked] = React.useState([]);
   const [left, setLeft] = React.useState([
-    "Baby Formula",
-    "Bacon",
-    "Beans",
-    "Beef",
-    "Bread",
-    "Canned Corn",
-    "Canned Soup",
-    "Cereal",
-    "Cheese",
-    "Chicken",
-    "Diapers",
-    "Eggs",
-    "Fruit",
-    "Fresh Vegetables",
-    "Frozen Dinners",
-    "Hand Sanitizer",
-    "Ibuprofen",
-    "Milk",
-    "Pedialyte",
-    "Pork",
-    "Potato Chips",
-    "Rice",
-    "Soap",
-    "Soda",
-    "Tofu",
-    "Toilet Paper",
-    "Tomatoes",
-    "Tortilla Chips",
-    "Tylenol",
-    "Wet Wipes",
-    "Wine",
-    "Other: Email me for more info"
+    "Baby Formula ",
+    "Bacon ",
+    "Beans ",
+    "Beef ",
+    "Bread ",
+    "Canned Corn ",
+    "Canned Soup ",
+    "Cereal ",
+    "Cheese ",
+    "Chicken ",
+    "Diapers ",
+    "Eggs ",
+    "Fruit ",
+    "Fresh Vegetables ",
+    "Frozen Dinners ",
+    "Hand Sanitizer ",
+    "Ibuprofen ",
+    "Milk ",
+    "Pedialyte ",
+    "Pork ",
+    "Potato Chips ",
+    "Rice ",
+    "Soap ",
+    "Soda ",
+    "Tofu ",
+    "Toilet Paper ",
+    "Tomatoes ",
+    "Tortilla Chips ",
+    "Tylenol ",
+    "Wet Wipes ",
+    "Wine ",
+    "Other: Email me for more info. "
   ]);
   const [right, setRight] = React.useState([]);
 
@@ -163,11 +163,9 @@ export default function PostNeed() {
       .then(res => {
         console.log("After Request");
         console.log(res.data);
-       
       })
       .catch(err => console.log(err));
   };
-
 
   const emailChange = event => {
     setNeedState({ ...needState, email: event.target.value });
