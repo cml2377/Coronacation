@@ -1,0 +1,15 @@
+@import "./variables";
+
+#searchBar {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#grid{
+  @include flexCenter();
+}
+
+#needCard{
+    max-width:95%;
+}
+

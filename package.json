@@ -1,37 +1,49 @@
 {
   "name": "coronacation",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@auth0/auth0-spa-js": "^1.6.4",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.0",
-    "react-toastify": "^5.5.0"
+  "version": "1.0.0",
+  "description": "VIVA CORONACATIONNNNN",
+  "main": "server.js",
+  "engines": {
+    "node": "12.16.x"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "seed": "node seeders/seed.js",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cml2377/Coronacation.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [
+    "coronavirus",
+    "needATX",
+    "supplies"
+  ],
+  "author": "Kurt LaVacque, Justin Wofford, Crystal Ly, Brianna McCray, Z Naddaf, Joshua Kuruvilla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cml2377/Coronacation/issues"
+  },
+  "homepage": "https://github.com/cml2377/Coronacation#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.9.7",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.47",
+    "axios": "^0.19.2",
+    "concurrently": "^5.1.0",
+    "express": "^4.17.1",
+    "mongojs": "^3.1.0",
+    "mongoose": "^5.9.5",
+    "nodemon": "^2.0.2",
+    "react-sticky-footer": "0.1.0-rc3"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.1"
   }
 }

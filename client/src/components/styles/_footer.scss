@@ -1,0 +1,20 @@
+@import "./variables";
+
+.footerText {
+  min-height: 100%;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  font-size: 18px;
+  background-color: $titleColor;
+}
+
+.linkNames {
+  color: white !important;
+}
+
+.linkNames:hover{
+  text-decoration: none !important;
+}
