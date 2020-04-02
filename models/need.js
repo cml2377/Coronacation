@@ -15,6 +15,9 @@ const needSchema = new Schema({
   completed: Boolean,
 })
 
+needSchema.index({ day: 1 }, { expires: "14 days" })
+
 const Need = mongoose.model('needs', needSchema)
+
 
 module.exports = Need
