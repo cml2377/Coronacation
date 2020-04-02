@@ -175,7 +175,7 @@ export default function PostNeed() {
       .then(res => {
         console.log(res.data);
 
-        setTimeout(() => { window.location.pathname = "/find_need" }, 1500);
+        setTimeout(() => { window.location.pathname = "/find_need" }, 1250);
       })
       .catch(err => console.log(err));
   };
