@@ -161,8 +161,8 @@ export default function PostNeed() {
     console.log({ handleSubmit: data });
     API.postNeed(data)
       .then(res => {
-        console.log("After Request");
         console.log(res.data);
+        window.location.pathname = "/find_need"
       })
       .catch(err => console.log(err));
   };
@@ -241,7 +241,8 @@ export default function PostNeed() {
             </Button>
           </Grid>
         </Grid>
-        <Grid item>{customList(right)}</Grid>
+        <Grid refs="needBox" item>{customList(right)}
+        </Grid>
 
         <div id="zipcodeInput">
           <CssTextField
