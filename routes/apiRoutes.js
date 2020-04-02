@@ -75,25 +75,4 @@ module.exports = function (app) {
       console.log(err);
     });
   });
-
-
-  // ==================================================================================================
-  // Delete "need" from database/Mark complete - Working
-  // ==================================================================================================
-  app.delete("/api/need/:id", async (req, res) => {
-    // Create an empty workout object ready for exercises to get put into it
-    const request = await db.Needs.remove({ _id: req.params.id });
-    // Send the request back to the front end
-    // res.send('Deleted')
-    res.send({ Deleted: request });
-  });
-};
-
-// ===========================================================
-// Auto delete documents (Needs) from database after 2 weeks.
-// ===========================================================
-
-app.delete("/api/need/", async (req, res) => {
-  const oldNeeds = await db.Needs.remove({ date: { $lte: new Date().getDate() - 14 } });
-  res.send({ Deleted: oldNeeds })
-})
+}
