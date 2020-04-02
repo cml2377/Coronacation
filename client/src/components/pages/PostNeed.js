@@ -9,7 +9,16 @@ import Checkbox from "@material-ui/core/Checkbox";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import TextField from "@material-ui/core/TextField";
+import Snackbar from '@material-ui/core/Snackbar';
 import API from "../../utils/API";
+import MuiAlert from '@material-ui/lab/Alert';
+
+
+//For Snackbar Alert
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+
 
 // CSS for the Zipcode and Email input boxes.
 const CssTextField = withStyles({
@@ -100,6 +109,8 @@ export default function PostNeed() {
   ]);
   const [right, setRight] = React.useState([]);
 
+  const [open, setOpen] = React.useState(false);
+
   const leftChecked = intersection(checked, left);
   const rightChecked = intersection(checked, right);
 
@@ -158,13 +169,23 @@ export default function PostNeed() {
       list: itemsArray,
       completed: false
     };
+    setOpen(true);
     console.log({ handleSubmit: data });
     API.postNeed(data)
       .then(res => {
         console.log(res.data);
-        window.location.pathname = "/find_need"
+
+        setTimeout(() => { window.location.pathname = "/find_need" }, 1500);
       })
       .catch(err => console.log(err));
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
   };
 
   const emailChange = event => {
@@ -275,6 +296,12 @@ export default function PostNeed() {
           </Button>
         </div>
       </Grid>
+
+      <Snackbar open={open} autoHideDuration={5000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success">
+          Successfully submitted Need!
+        </Alert>
+      </Snackbar>
     </div>
   );
 }
