@@ -22,14 +22,18 @@ Currently, we are restricting the location for this app to Austin, TX zipcodes. 
 
 When a user reaches the Landing Page at the root URL, they will view information about the application. 
 
+<img src="./client/readmeImages/Homepage.png" width="100%">
+
 The Log In Page features an email field, password field, submit button, and password assistance link. ((Icebox: Google/Facebook/Other connection login with Auth0))
 
 (Icebox) The Sign Up Page features form to create account email and password, as well as radio dial preselections or a zipcode field for the user to select their Local Neighborhood. 
 
+<img src="./client/readmeImages/ListNeeds.png" width="100%">
+
 After the homepage, the User is redirected to a page with most recent Needs. Features include: 
 [1] Display of Neighborhood Postings ordered by Most Recent. 
-[2] Link to user's Postings in 'My Postings/User Profile'. 
-[3] Link to Postings User has Responded to in 'My Responses'. [4] Form to create a Posting in 'Create Posting'.
+~~[2] Link to user's Postings in 'My Postings/User Profile'.~~ 
+~~[3] Link to Postings User has Responded to in 'My Responses'.~~ [4] Form to create a Posting in 'Create Posting'.
 
 <img src="./client/readmeImages/Wireframe-Prototype2.png" width="100%">
 
@@ -40,9 +44,9 @@ After the homepage, the User is redirected to a page with most recent Needs. Fea
 When a user (Postee) needs something, they can post a Posting. On the Create Posting page, there's a form asking the User to define their need and a submit button. Once submitted, the Posting will be assigned a foreign key of the Neighborhood affiliated with the User's account. 
 
 * Limit of 5 Requests per User?
-* Unlimited number of Responses. 
-* Ability to Flag Users abusing the system. 
-* Flagged User emails will be Blocked. 
+* Unlimited number of Responses, due to direct messaging/emails. 
+* Ability to Flag Users abusing the system. (Icebox)
+* Flagged User emails will be Blocked. (Icebox)
 
 <img src="./client/readmeImages/flowchart.png" width="100%">
 
