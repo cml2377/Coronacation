@@ -94,6 +94,7 @@ export default class FindNeed extends Component {
     return (
       <div className="findNeedContainer">
         <h3>List of Needs</h3>
+        <h3>Needs will auto-delete after 14 days.</h3>
         {/* Search Bar to search by Zipcode. */}
         <Paper id="searchBar" component="form">
           <InputBase
