@@ -44,6 +44,6 @@
     "react-sticky-footer": "0.1.0-rc3"
   },
   "devDependencies": {
-    "node-sass": "^4.13.1"
+    "node-sass": "^7.0.0"
   }
 }
